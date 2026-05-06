@@ -69,7 +69,7 @@ function handleNavigation(page) {
 
     switch (page) {
         case 'beranda':
-            window.location.href = '/';
+            window.location.href = 'index.html';
             break;
         case 'materi':
             window.location.href = 'materi.html';
