@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Simulasi Pengolahan Data — Data Sim</title>
+    <meta name="description" content="Ringkasan hasil simulasi pengolahan data — skor keseluruhan, ringkasan per level, dan analisis kualitas data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hasil-akhir.css">
+</head>
+<body class="page-hasil-akhir">
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <div class="topbar-inner">
+            <h1 class="topbar-title">Hasil Simulasi Pengolahan Data</h1>
+        </div>
+    </header>
+
+    <!-- Stepper — all completed -->
+    <nav class="stepper">
+        <div class="stepper-inner">
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><span class="stepper-label">Identifikasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg></div><span class="stepper-label">Validasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/></svg></div><span class="stepper-label">Verifikasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M10 11V17M14 11V17M5 7L6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="stepper-label">Pembersihan</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item active"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12C21.99 14.52 21.13 16.96 19.58 18.91" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="stepper-label">Hasil</span></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ha-main">
+        <div class="ha-container">
+
+            <!-- Overall Score Card -->
+            <section class="ha-score-card" id="ha-score-card">
+                <div class="ha-score-inner">
+                    <div class="ha-trophy">
+                        <div class="ha-trophy-icon" id="ha-trophy-icon">
+                            <svg width="52" height="52" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 21H16M12 17V21M6 3H18V7C18 10.3137 15.3137 13 12 13C8.68629 13 6 10.3137 6 7V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 7H3V9C3 10.6569 4.34315 12 6 12V7Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M18 7H21V9C21 10.6569 19.6569 12 18 12V7Z" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="ha-trophy-glow"></div>
+                    </div>
+                    <div class="ha-score-number-wrap">
+                        <span class="ha-score-number" id="ha-score-number">0</span>
+                        <span class="ha-score-percent">%</span>
+                    </div>
+                    <h2 class="ha-score-title" id="ha-score-title">Memuat...</h2>
+                    <p class="ha-score-subtitle" id="ha-score-subtitle">Menghitung skor keseluruhanmu...</p>
+                </div>
+                <canvas class="ha-confetti" id="ha-confetti"></canvas>
+            </section>
+
+            <!-- Ringkasan Tahapan -->
+            <section class="ha-section">
+                <h3 class="ha-section-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/></svg>
+                    Ringkasan Tahapan
+                </h3>
+                <div class="ha-levels-grid" id="ha-levels-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Analisis Kualitas Data -->
+            <section class="ha-section">
+                <h3 class="ha-section-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Analisis Kualitas Data
+                </h3>
+                <div class="ha-quality-card" id="ha-quality-card">
+                    <div class="ha-health-header">
+                        <span class="ha-health-score" id="ha-health-score">0</span>
+                        <span class="ha-health-percent">%</span>
+                        <div class="ha-health-meta">
+                            <span class="ha-health-label">Data Health Score</span>
+                            <span class="ha-health-desc" id="ha-health-desc">Kualitas data keseluruhanmu</span>
+                        </div>
+                    </div>
+                    <div class="ha-quality-bars" id="ha-quality-bars">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action -->
+            <div class="ha-actions">
+                <button class="ha-btn-finish" id="btn-finish">
+                    <span>Selesai & Keluar</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 17L21 12L16 7M21 12H9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/hasil-akhir.js"></script>
+</body>
+</html>

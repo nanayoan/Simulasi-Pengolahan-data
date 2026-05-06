@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifikasi Data — Data Sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materi-detail.css">
+</head>
+<body>
+
+<!-- Sticky Topbar -->
+<div class="materi-topbar">
+    <div class="materi-topbar-inner">
+        <a href="materi.html" class="materi-back-btn" title="Kembali">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <span class="materi-topbar-title">Identifikasi Data</span>
+        <span class="materi-topbar-badge badge-green">Materi 1 / 4</span>
+    </div>
+</div>
+
+<!-- Article -->
+<article class="materi-article">
+
+    <!-- Header -->
+    <header class="materi-article-header">
+        <span class="materi-article-number badge-green">Materi 01</span>
+        <h1 class="materi-article-title">Identifikasi Data</h1>
+        <p class="materi-article-desc">Pelajari proses pemeriksaan awal untuk menemukan dan mencatat seluruh permasalahan dalam kumpulan data sebelum diproses lebih lanjut.</p>
+    </header>
+
+    <!-- A. Pengantar dan Definisi -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">A</span> Pengantar dan Definisi</h2>
+        <p class="materi-text">Dalam era digital saat ini, data merupakan aset yang sangat berharga bagi berbagai organisasi dan lembaga. Namun, data yang dikumpulkan tidak selalu dalam kondisi sempurna. Seringkali terdapat kesalahan penginputan, ketidaklengkapan informasi, atau inkonsistensi format yang dapat mengurangi kualitas data secara keseluruhan.</p>
+        <p class="materi-text">Sebelum data dapat diolah dan dianalisis lebih lanjut, diperlukan suatu proses pemeriksaan awal yang disebut <strong>identifikasi data</strong>. Proses ini bertujuan untuk menemukan dan mencatat seluruh permasalahan yang ada dalam kumpulan data, sehingga langkah perbaikan dapat dilakukan secara tepat dan terarah.</p>
+
+        <div class="materi-highlight highlight-info">
+            <div class="materi-highlight-title">📘 Definisi</div>
+            <p class="materi-text"><strong>Identifikasi data</strong> adalah proses sistematis untuk mengenali, menemukan, dan mencatat data yang bermasalah, tidak lengkap, tidak konsisten, atau tidak sesuai dengan aturan dan standar yang berlaku dalam suatu kumpulan data, sebelum data tersebut diproses lebih lanjut.</p>
+        </div>
+
+        <div class="materi-highlight highlight-success">
+            <div class="materi-highlight-title">🎯 Tujuan Utama</div>
+            <p class="materi-text">Memastikan bahwa data yang akan diolah telah memenuhi syarat kualitas minimum sehingga hasil pengolahan dapat diandalkan.</p>
+        </div>
+    </section>
+
+    <!-- B. Mengapa Identifikasi Data Penting? -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">B</span> Mengapa Identifikasi Data Penting?</h2>
+        <p class="materi-text">Dalam ilmu komputer dan pengolahan informasi, terdapat sebuah prinsip dasar yang dikenal luas, yaitu <strong>GIGO (Garbage In, Garbage Out)</strong>. Prinsip ini menyatakan bahwa kualitas output dari suatu sistem informasi sepenuhnya bergantung pada kualitas data yang menjadi inputnya.</p>
+        <p class="materi-text">Apabila data yang dimasukkan ke dalam sistem berkualitas buruk (tidak lengkap, tidak akurat, atau tidak konsisten), maka informasi yang dihasilkan pun akan berkualitas buruk. Sebaliknya, data yang bersih, lengkap, dan akurat akan menghasilkan informasi yang andal dan bernilai tinggi.</p>
+
+        <div class="materi-highlight highlight-danger">
+            <div class="materi-highlight-title">⚠️ Dampak Negatif Jika Tidak Dilakukan</div>
+            <p class="materi-text"></p>
+        </div>
+        <ul class="materi-bullet-list">
+            <li><strong>Pengambilan Keputusan yang Keliru</strong> — Data tidak akurat menghasilkan informasi menyesatkan yang berpotensi merugikan organisasi.</li>
+            <li><strong>Pemborosan Sumber Daya</strong> — Memperbaiki kesalahan di tengah proses memerlukan waktu dan biaya jauh lebih besar.</li>
+            <li><strong>Hilangnya Kepercayaan Pengguna</strong> — Sistem yang sering menghasilkan laporan keliru akan kehilangan kepercayaan.</li>
+            <li><strong>Dampak Berantai pada Sistem Lain</strong> — Data salah pada satu sumber menyebabkan kesalahan berantai pada seluruh sistem yang bergantung.</li>
+        </ul>
+    </section>
+
+    <!-- C. Jenis-Jenis Masalah Data -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">C</span> Jenis-Jenis Masalah Data</h2>
+
+        <!-- 1. Data Tidak Lengkap -->
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">1. Data Tidak Lengkap (Missing/Incomplete Data)</h3>
+        <p class="materi-text">Terjadi apabila satu atau lebih kolom wajib ternyata kosong atau tidak memiliki nilai. Setiap atribut yang bersifat mandatory tidak boleh dibiarkan kosong.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh pada Data Siswa</div>
+            <div style="margin-bottom:10px;">
+                <span class="example-tag tag-error">✗ Bermasalah</span>
+                <div class="example-row"><span class="example-field">NIS: 2024003</span><span class="example-field field-error">Nama: (kosong)</span><span class="example-field">Tgl: 15/01/2008</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Kolom Nama wajib diisi</p>
+            </div>
+            <div>
+                <span class="example-tag tag-ok">✓ Baik</span>
+                <div class="example-row"><span class="example-field">NIS: 2024003</span><span class="example-field field-ok">Nama: Citra Lestari</span><span class="example-field">Tgl: 15/01/2008</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#059669;">Semua kolom terisi</p>
+            </div>
+        </div>
+
+        <!-- 2. Format Tidak Konsisten -->
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">2. Format Tidak Konsisten (Inconsistent Format)</h3>
+        <p class="materi-text">Terjadi ketika data memiliki cara penulisan yang berbeda-beda untuk informasi yang seharusnya mengikuti satu standar yang sama.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh Format Tanggal</div>
+            <div style="margin-bottom:10px;">
+                <span class="example-tag tag-error">✗ Bermasalah</span>
+                <div class="example-row"><span class="example-field field-error">Tgl Lahir: 2008-07-15</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Format YYYY-MM-DD, seharusnya DD/MM/YYYY</p>
+            </div>
+            <div>
+                <span class="example-tag tag-ok">✓ Baik</span>
+                <div class="example-row"><span class="example-field field-ok">Tgl Lahir: 15/07/2008</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#059669;">Format standar DD/MM/YYYY terpenuhi</p>
+            </div>
+        </div>
+
+        <!-- 3. Data Duplikat -->
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">3. Data Duplikat (Duplicate Data)</h3>
+        <p class="materi-text">Kondisi di mana satu entitas yang sama tercatat lebih dari satu kali. Duplikasi umumnya terjadi akibat kesalahan input, penggabungan dari beberapa sumber, atau kegagalan sistem.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh pada Data Siswa</div>
+            <div style="margin-bottom:10px;">
+                <span class="example-tag tag-ok">Baris 1 (Asli)</span>
+                <div class="example-row"><span class="example-field">NIS: 2024001</span><span class="example-field">Nama: Andi Wijaya</span><span class="example-field">Kelas: X-TKJ</span></div>
+            </div>
+            <div>
+                <span class="example-tag tag-error">Baris 4 (Duplikat)</span>
+                <div class="example-row"><span class="example-field field-error">NIS: 2024001</span><span class="example-field field-error">Nama: Andi Wijaya</span><span class="example-field field-error">Kelas: X-TKJ</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Data duplikat — NIS sudah digunakan di Baris 1</p>
+            </div>
+        </div>
+
+        <!-- 4. Data Tidak Valid -->
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">4. Data Tidak Valid (Invalid Data)</h3>
+        <p class="materi-text">Data yang memiliki nilai yang secara teknis tersimpan dalam sistem, namun tidak memenuhi aturan bisnis atau batasan nilai yang ditetapkan.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh pada Data Siswa</div>
+            <div style="margin-bottom:10px;">
+                <span class="example-tag tag-error">✗ Bermasalah</span>
+                <div class="example-row"><span class="example-field field-error">Nama: Budi 123</span><span class="example-field field-error">No Telp: 08133445</span><span class="example-field field-error">Kelas: XTKJ</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Nama ada angka; No Telp kurang digit; Kelas tanpa tanda hubung</p>
+            </div>
+            <div>
+                <span class="example-tag tag-ok">✓ Baik</span>
+                <div class="example-row"><span class="example-field field-ok">Nama: Budi Santoso</span><span class="example-field field-ok">No Telp: 081334456789</span><span class="example-field field-ok">Kelas: X-TKJ</span></div>
+                <p class="materi-text" style="font-size:0.82rem;color:#059669;">Semua nilai sesuai aturan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- D. Contoh Kasus -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">D</span> Contoh Kasus: Identifikasi Data Siswa</h2>
+        <p class="materi-text">Berikut adalah contoh kumpulan data siswa yang perlu diperiksa. Perhatikan setiap baris secara teliti:</p>
+
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead>
+                    <tr><th>No</th><th>NIS</th><th>Nama</th><th>Tgl Lahir</th><th>Kelas</th><th>No Telp</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>2024001</td><td>Andi Wijaya</td><td>12/05/2008</td><td>X-TKJ</td><td>08123456789</td></tr>
+                    <tr><td>2</td><td>2024002</td><td class="cell-error">Budi 123</td><td>10/10/2009</td><td>X-TKJ</td><td>08199867766</td></tr>
+                    <tr><td>3</td><td>2024003</td><td class="cell-error">(Kosong)</td><td>15/01/2008</td><td>X-TKJ</td><td>08521234432</td></tr>
+                    <tr><td>4</td><td class="cell-error">2024001</td><td class="cell-error">Andi Wijaya</td><td class="cell-error">12/05/2008</td><td class="cell-error">X-TKJ</td><td class="cell-error">08123456789</td></tr>
+                    <tr><td>5</td><td>2024005</td><td>Dewi Sartika</td><td>22/03/2010</td><td class="cell-error">XTKJ</td><td>08123456781</td></tr>
+                    <tr><td>6</td><td>2024006</td><td>Eko Prasetyo</td><td>05/12/2007</td><td>X-TKJ</td><td class="cell-error">08133445</td></tr>
+                    <tr><td>7</td><td>2024007</td><td>Fani Rahayu</td><td class="cell-error">2008-07-15</td><td>X-TKJ</td><td>08133344455</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="font-size:1rem;font-weight:700;margin:20px 0 12px;">Analisis Masalah</h3>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead>
+                    <tr><th>No</th><th>Baris</th><th>Kolom</th><th>Jenis Masalah</th><th>Keterangan</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Baris 2</td><td>Nama</td><td>Data Tidak Valid</td><td>'Budi 123' mengandung angka — nama hanya boleh huruf dan spasi</td></tr>
+                    <tr><td>2</td><td>Baris 3</td><td>Nama</td><td>Data Tidak Lengkap</td><td>Kolom Nama kosong, merupakan kolom wajib</td></tr>
+                    <tr><td>3</td><td>Baris 4</td><td>Semua</td><td>Data Duplikat</td><td>NIS '2024001' sudah digunakan pada Baris 1</td></tr>
+                    <tr><td>4</td><td>Baris 5</td><td>Kelas</td><td>Data Tidak Valid</td><td>'XTKJ' tidak sesuai format standar 'X-TKJ'</td></tr>
+                    <tr><td>5</td><td>Baris 6</td><td>No Telp</td><td>Data Tidak Valid</td><td>'08133445' hanya 8 digit — harus 10-12 digit</td></tr>
+                    <tr><td>6</td><td>Baris 7</td><td>Tgl Lahir</td><td>Format Tidak Konsisten</td><td>'2008-07-15' bukan format DD/MM/YYYY</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- E. Hubungan dengan Tahap Lainnya -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">E</span> Hubungan dengan Tahap Pengolahan Lainnya</h2>
+        <p class="materi-text">Identifikasi data merupakan tahap pertama dari empat tahapan utama dalam siklus pengolahan data. Keempat tahapan ini bersifat berurutan dan saling bergantung:</p>
+
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Identifikasi Data</div><div class="flow-desc">Menemukan dan mencatat data bermasalah → Output: Daftar masalah data</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Validasi Data</div><div class="flow-desc">Memeriksa kesesuaian data dengan aturan → Output: Status validasi</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Verifikasi Data</div><div class="flow-desc">Membandingkan data dengan sumber referensi → Output: Konfirmasi kebenaran</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Pembersihan Data</div><div class="flow-desc">Memperbaiki atau menghapus data bermasalah → Output: Data bersih siap analisis</div></div></div>
+        </div>
+
+        <div class="materi-highlight highlight-warning">
+            <div class="materi-highlight-title">⚡ Penting</div>
+            <p class="materi-text">Tanpa identifikasi yang menyeluruh di tahap pertama, seluruh proses berikutnya berisiko melewatkan masalah yang seharusnya diperbaiki.</p>
+        </div>
+    </section>
+
+    <!-- F. Langkah-Langkah -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">F</span> Langkah-Langkah Identifikasi Data</h2>
+        <p class="materi-text">Proses identifikasi data harus dilakukan secara sistematis dan terurut agar tidak ada masalah yang terlewat:</p>
+
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Tentukan Aturan dan Standar Data</div><div class="flow-desc">Pahami aturan setiap kolom: NIS 7 digit, Nama hanya huruf dan spasi, Tanggal DD/MM/YYYY, Kelas format X-XXX, No Telp 10-12 digit diawali '08'.</div></div></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Periksa Kelengkapan Data</div><div class="flow-desc">Periksa setiap baris apakah seluruh kolom wajib telah terisi. Kolom kosong atau hanya berisi simbol pengganti dicatat sebagai data tidak lengkap.</div></div></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Periksa Konsistensi Format</div><div class="flow-desc">Bandingkan format penulisan setiap nilai dengan standar. Fokus pada kolom tanggal, kode kelas, dan nomor identitas.</div></div></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Identifikasi Data Duplikat</div><div class="flow-desc">Periksa kolom identifikasi unik (NIS) untuk menemukan nilai yang muncul lebih dari satu kali. Catat baris asli dan duplikat.</div></div></div>
+            <div class="flow-step"><div class="flow-number">5</div><div class="flow-content"><div class="flow-title">Validasi Nilai Data</div><div class="flow-desc">Periksa apakah setiap nilai berada dalam rentang dan kategori yang diizinkan. Nama tidak boleh angka, telepon harus cukup digit.</div></div></div>
+            <div class="flow-step"><div class="flow-number">6</div><div class="flow-content"><div class="flow-title">Dokumentasi Seluruh Temuan</div><div class="flow-desc">Catat secara sistematis: baris bermasalah, kolom bermasalah, kategori masalah, dan nilai yang seharusnya.</div></div></div>
+        </div>
+    </section>
+
+    <!-- G. Ringkasan -->
+    <section class="materi-section">
+        <div class="materi-summary">
+            <div class="materi-summary-title">📝 Ringkasan</div>
+            <ol>
+                <li><strong>Identifikasi data</strong> adalah langkah pertama dalam proses pengolahan data yang bertujuan menemukan data bermasalah sebelum diolah.</li>
+                <li>Prinsip <strong>GIGO (Garbage In, Garbage Out)</strong> mengingatkan bahwa kualitas hasil pengolahan bergantung pada kualitas data yang dimasukkan.</li>
+                <li>Ada <strong>empat jenis masalah utama</strong>: data tidak lengkap, format tidak konsisten, data duplikat, dan data tidak valid.</li>
+                <li>Identifikasi dilakukan sistematis: tentukan aturan → periksa kelengkapan → periksa format → cari duplikat → validasi nilai → catat masalah.</li>
+                <li>Hasil identifikasi data menjadi dasar untuk tahap selanjutnya: <strong>validasi</strong>, <strong>verifikasi</strong>, dan <strong>pembersihan</strong> data.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <nav class="materi-bottom-nav">
+        <span class="materi-nav-btn btn-prev btn-disabled">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            Sebelumnya
+        </span>
+        <a href="assets/images/Materi_1_Identifikasi_Data .pdf" target="_blank" class="materi-nav-btn btn-pdf">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/><path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/></svg>
+            Lihat PDF
+        </a>
+        <a href="materi-validasi.html" class="materi-nav-btn btn-next">
+            Materi Selanjutnya
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+    </nav>
+
+</article>
+
+</body>
+</html>

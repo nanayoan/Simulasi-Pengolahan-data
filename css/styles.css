@@ -1,0 +1,516 @@
+/* ============================================
+   DATA SIM — Design System & Styles
+   ============================================ */
+
+/* --- CSS Variables --- */
+:root {
+    --color-primary: #4A6CF7;
+    --color-primary-light: #6B8AFF;
+    --color-primary-dark: #3451DB;
+    --color-primary-bg: #EEF2FF;
+    --color-green: #34C759;
+    --color-green-light: #5ADB7B;
+    --color-green-dark: #248A3D;
+    --color-green-bg: #EAFBF0;
+    --color-bg: #F5F7FB;
+    --color-white: #FFFFFF;
+    --color-text: #1A1D26;
+    --color-text-secondary: #6B7280;
+    --color-text-muted: #9CA3AF;
+    --color-border: #E5E7EB;
+    --color-nav-inactive: #9CA3AF;
+    --shadow-card: 0 4px 24px rgba(74, 108, 247, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+    --shadow-card-hover: 0 8px 32px rgba(74, 108, 247, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-btn: 0 4px 16px rgba(74, 108, 247, 0.3);
+    --shadow-btn-green: 0 4px 16px rgba(52, 199, 89, 0.3);
+    --radius-card: 20px;
+    --radius-btn: 50px;
+    --radius-badge: 20px;
+    --radius-icon: 16px;
+    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-smooth: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- Reset & Base --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header --- */
+.header {
+    background: var(--color-white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--color-border);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.92);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(74, 108, 247, 0.3);
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+}
+
+/* --- Main Content --- */
+.main-content {
+    padding-bottom: 100px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* --- Greeting --- */
+.greeting {
+    padding: 32px 0 8px;
+}
+
+.greeting-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+}
+
+.greeting-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+/* --- Cards Section --- */
+.cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px 0;
+}
+
+/* --- Feature Card --- */
+.feature-card {
+    background: var(--color-white);
+    border-radius: var(--radius-card);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(229, 231, 235, 0.6);
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: 0.04;
+    transition: opacity var(--transition-normal);
+}
+
+.card-materi::before {
+    background: var(--color-primary);
+    transform: translate(40px, -40px);
+}
+
+.card-latihan::before {
+    background: var(--color-green);
+    transform: translate(40px, -40px);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.feature-card:hover::before {
+    opacity: 0.08;
+}
+
+/* Card Icon */
+.card-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-icon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.card-icon-blue {
+    background: var(--color-primary-bg);
+}
+
+.card-icon-green {
+    background: var(--color-green-bg);
+}
+
+/* Card Badge */
+.card-badge {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: var(--radius-badge);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
+.badge-blue {
+    background: var(--color-primary-bg);
+    color: var(--color-primary);
+}
+
+.badge-green {
+    background: var(--color-green-bg);
+    color: var(--color-green-dark);
+}
+
+/* Card Content */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.card-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Card Button */
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: var(--radius-btn);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-white);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    letter-spacing: 0.01em;
+}
+
+.btn-blue {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    box-shadow: var(--shadow-btn);
+}
+
+.btn-blue:hover {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-green {
+    background: linear-gradient(135deg, var(--color-green), var(--color-green-light));
+    box-shadow: var(--shadow-btn-green);
+}
+
+.btn-green:hover {
+    background: linear-gradient(135deg, var(--color-green-dark), var(--color-green));
+    box-shadow: 0 6px 20px rgba(52, 199, 89, 0.4);
+    transform: translateY(-2px);
+}
+
+.card-btn svg {
+    transition: transform var(--transition-fast);
+}
+
+.card-btn:hover svg {
+    transform: translateX(4px);
+}
+
+/* --- Bottom Navigation --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    z-index: 100;
+    padding: 0;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 12px 24px;
+    color: var(--color-nav-inactive);
+    transition: color var(--transition-fast);
+    position: relative;
+    cursor: pointer;
+    flex: 0 1 auto;
+    min-width: 80px;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 40px;
+    height: 3px;
+    background: var(--color-primary);
+    border-radius: 0 0 4px 4px;
+    transition: transform var(--transition-normal);
+}
+
+.nav-item.active {
+    color: var(--color-primary);
+}
+
+.nav-item.active::before {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.nav-item:hover {
+    color: var(--color-primary);
+}
+
+.nav-icon {
+    width: 22px;
+    height: 22px;
+}
+
+.nav-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.greeting {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.feature-card {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+/* --- Desktop Layout (≥ 768px) --- */
+@media (min-width: 768px) {
+    .header-inner {
+        padding: 18px 40px;
+    }
+
+    .container {
+        padding: 0 40px;
+    }
+
+    .greeting {
+        padding: 48px 0 16px;
+    }
+
+    .greeting-title {
+        font-size: 2.25rem;
+    }
+
+    .greeting-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .cards-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        padding: 32px 0;
+    }
+
+    .feature-card {
+        padding: 36px 32px;
+    }
+
+    .card-title {
+        font-size: 1.35rem;
+    }
+
+    .card-desc {
+        font-size: 0.925rem;
+    }
+
+    .nav-item {
+        padding: 14px 32px;
+        min-width: 100px;
+    }
+
+    .nav-label {
+        font-size: 0.75rem;
+    }
+}
+
+/* --- Large Desktop (≥ 1024px) --- */
+@media (min-width: 1024px) {
+    .header-inner {
+        padding: 20px 48px;
+    }
+
+    .container {
+        padding: 0 48px;
+    }
+
+    .greeting {
+        padding: 56px 0 20px;
+    }
+
+    .greeting-title {
+        font-size: 2.5rem;
+    }
+
+    .cards-section {
+        gap: 32px;
+        padding: 36px 0;
+    }
+
+    .feature-card {
+        padding: 40px 36px;
+    }
+
+    .card-icon-wrapper {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        padding: 16px 40px;
+        min-width: 120px;
+    }
+}
+
+/* --- Mobile Small (≤ 380px) --- */
+@media (max-width: 380px) {
+    .header-inner {
+        padding: 14px 16px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .greeting-title {
+        font-size: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 24px 20px;
+    }
+
+    .card-btn {
+        padding: 10px 22px;
+        font-size: 0.85rem;
+    }
+
+    .nav-item {
+        padding: 10px 16px;
+        min-width: 60px;
+    }
+}

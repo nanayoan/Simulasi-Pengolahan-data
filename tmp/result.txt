@@ -1,0 +1,32 @@
+HTTP: 200
+Error(0): 
+Response: {
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "{\"test\":\"ok\"}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 9,
+    "candidatesTokenCount": 5,
+    "totalTokenCount": 39,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ],
+    "thoughtsTokenCount": 25
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "Be_LaZXzCY-9juMPp5a6iQQ"
+}

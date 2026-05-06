@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Latihan — Data Sim</title>
+    <meta name="description" content="Mulai simulasi pengolahan data interaktif. Latih kemampuan Validasi, Verifikasi, dan Cleansing Data.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/simulasi.css">
+    <link rel="stylesheet" href="css/ai-generator.css">
+</head>
+<body class="page-simulasi">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="12" cy="6" rx="8" ry="4" fill="white" opacity="0.9"/>
+                        <ellipse cx="12" cy="12" rx="8" ry="4" fill="white" opacity="0.7"/>
+                        <ellipse cx="12" cy="18" rx="8" ry="4" fill="white" opacity="0.5"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Data Sim</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <section class="simulasi-hero" id="simulasi-hero">
+                <div class="hero-grid">
+                    <!-- Hero Image -->
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-container">
+                            <img src="assets/images/simulasi-hero.png" alt="Simulasi Pengolahan Data" class="hero-image" loading="lazy">
+                            <div class="hero-image-badge">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#34C759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="#34C759" stroke-width="2"/></svg>
+                                Integritas Data Terjamin
+                            </div>
+                        </div>
+                        <div class="floating-particle p1"></div>
+                        <div class="floating-particle p2"></div>
+                        <div class="floating-particle p3"></div>
+                    </div>
+
+                    <!-- Hero Content -->
+                    <div class="hero-content">
+                        <span class="hero-module-badge">
+                            <span class="badge-dot"></span>
+                            Modul Simulasi 01
+                        </span>
+
+                        <h1 class="hero-title">
+                            Apakah kamu siap untuk melakukan <span class="hero-title-accent">simulasi?</span>
+                        </h1>
+
+                        <!-- Principle Card -->
+                        <div class="principle-card">
+                            <div class="principle-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="principle-label">Prinsip Penting</span>
+                                <p class="principle-text">"Ingat prinsip <strong>Garbage In, Garbage Out (GIGO)</strong> — Data buruk menghasilkan keputusan buruk! Bersihkan dan validasi data agar keputusan yang diambil menjadi tepat sasaran."</p>
+                            </div>
+                        </div>
+
+                        <!-- AI Generate Button -->
+                        <button class="simulasi-cta-btn" id="btn-ai-generate" style="background: linear-gradient(135deg, #1a1d26, #2d3142); border: none; cursor: pointer; margin-bottom: 10px;">
+                            <span class="cta-text">✨ Buat Soal Baru</span>
+                            <span class="cta-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" opacity="0.3"/>
+                                </svg>
+                            </span>
+                        </button>
+
+                        <!-- AI Active Badge -->
+                        <div class="ai-active-status" id="ai-active-badge" style="display: none;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="#34C759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Soal sudah dibuat</span>
+                        </div>
+
+                        <!-- Start Simulation Button -->
+                        <a href="simulasi-validasi.html" class="simulasi-cta-btn" id="btn-start-sim">
+                            <span class="cta-text">Mulai Simulasi Pengolahan Data</span>
+                            <span class="cta-arrow">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav" id="bottom-nav">
+        <a href="index.html" class="nav-item" data-page="beranda" id="nav-beranda">
+            <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 10.5L12 3L21 10.5V20C21 20.5523 20.5523 21 20 21H15V15H9V21H4C3.44772 21 3 20.5523 3 20V10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="nav-label">Beranda</span>
+        </a>
+        <a href="materi.html" class="nav-item" data-page="materi" id="nav-materi">
+            <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6.5 2H20V22H6.5A2.5 2.5 0 014 19.5V4.5A2.5 2.5 0 016.5 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="nav-label">Materi</span>
+        </a>
+        <a href="simulasi.html" class="nav-item active" data-page="simulasi" id="nav-simulasi">
+            <svg class="nav-icon" width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <rect x="9" y="2" width="6" height="5" rx="1" stroke="currentColor" stroke-width="2"/>
+                <path d="M9 13L11 15L15 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="nav-label">Simulasi</span>
+        </a>
+    </nav>
+
+    <!-- AI Generator Modal -->
+    <div class="ai-modal-overlay" id="ai-modal-overlay">
+        <div class="ai-modal">
+            <div class="ai-modal-header">
+                <h2 class="ai-modal-title">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.15"/></svg>
+                    Buat Soal Baru
+                </h2>
+                <button class="ai-modal-close" id="ai-modal-close">&times;</button>
+            </div>
+
+            <!-- Form State -->
+            <div id="ai-form-state">
+                <!-- Difficulty Level Selection -->
+                <div class="ai-template-section">
+                    <p class="ai-template-label">Pilih tingkat kesulitan:</p>
+                    <div class="ai-template-grid">
+                        <div class="ai-template-card selected" data-template="mudah">
+                            <div class="ai-template-icon" style="background: #EAFBF0; color: #34C759;">🟢</div>
+                            <div class="ai-template-info">
+                                <span class="ai-template-name">Mudah</span>
+                                <span class="ai-template-desc">Sedikit kesalahan, cocok untuk pemula</span>
+                            </div>
+                        </div>
+                        <div class="ai-template-card" data-template="sedang">
+                            <div class="ai-template-icon" style="background: #FFF7ED; color: #F59E0B;">🟡</div>
+                            <div class="ai-template-info">
+                                <span class="ai-template-name">Sedang</span>
+                                <span class="ai-template-desc">Kesalahan lebih bervariasi dan menantang</span>
+                            </div>
+                        </div>
+                        <div class="ai-template-card" data-template="sulit">
+                            <div class="ai-template-icon" style="background: #FEE2E2; color: #EF4444;">🔴</div>
+                            <div class="ai-template-info">
+                                <span class="ai-template-name">Sulit</span>
+                                <span class="ai-template-desc">Banyak kesalahan kompleks, untuk yang mahir</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="ai-btn-generate" id="ai-btn-generate">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/></svg>
+                    Buat Data Baru
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div class="ai-loading" id="ai-loading-state">
+                <div class="ai-loading-spinner"></div>
+                <p class="ai-loading-text">Membuat data simulasi...</p>
+                <p class="ai-loading-subtext">Menyiapkan soal untuk semua level</p>
+            </div>
+
+            <!-- Success State -->
+            <div class="ai-success" id="ai-success-state">
+                <div class="ai-success-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+                </div>
+                <h3 class="ai-success-title">Data Siap!</h3>
+                <p class="ai-success-text">Data simulasi untuk semua 4 level telah berhasil dibuat.</p>
+                <button class="ai-btn-start" id="ai-btn-start">
+                    Mulai Simulasi
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+
+            <!-- Error State -->
+            <div class="ai-error" id="ai-error-state">
+                <div class="ai-error-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <h3 class="ai-error-title">Gagal</h3>
+                <p class="ai-error-text" id="ai-error-text">Terjadi kesalahan saat membuat data.</p>
+                <button class="ai-btn-retry" id="ai-btn-retry">Coba Lagi</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/question-generator.js"></script>
+    <script src="js/ai-generator.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 3: Verifikasi Data — Data Sim</title>
+    <meta name="description" content="Level 3 simulasi: Verifikasi data dengan membandingkan data input vs data referensi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/verifikasi.css">
+</head>
+<body class="page-verifikasi">
+
+    <!-- Top Bar -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-title-group">
+                <h1 class="topbar-title">Level 3: Verifikasi Data</h1>
+                <div class="topbar-level-badge" id="topbar-level-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span id="badge-difficulty-text">Pemula</span>
+                </div>
+            </div>
+            <div class="topbar-data-nav">
+                <span class="data-nav-label">Data</span>
+                <span class="data-nav-current" id="data-nav-current">1</span>
+                <span class="data-nav-sep">/</span>
+                <span class="data-nav-total" id="data-nav-total">6</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stepper -->
+    <nav class="stepper" id="stepper">
+        <div class="stepper-inner">
+            <div class="stepper-item completed" data-step="1">
+                <div class="stepper-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <span class="stepper-label">Identifikasi</span>
+            </div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed" data-step="2">
+                <div class="stepper-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="8" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="12" cy="16.5" r="1" fill="currentColor"/>
+                    </svg>
+                </div>
+                <span class="stepper-label">Validasi</span>
+            </div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item active" data-step="3">
+                <div class="stepper-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+                <span class="stepper-label">Verifikasi</span>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-item" data-step="4">
+                <div class="stepper-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 7H20M10 11V17M14 11V17M5 7L6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="stepper-label">Pembersihan</span>
+            </div>
+            <div class="stepper-line"></div>
+            <div class="stepper-item" data-step="5">
+                <div class="stepper-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 11.08V12C21.99 14.52 21.13 16.96 19.58 18.91C18.03 20.87 15.87 22.21 13.45 22.72" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="stepper-label">Hasil</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ver-main" id="main-content">
+        <div class="ver-container">
+
+            <!-- Left: Data Input -->
+            <section class="ver-card ver-card-input" id="ver-card-input">
+                <div class="ver-card-header">
+                    <div class="ver-card-icon ver-card-icon-blue">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M16 4H18C19.1 4 20 4.9 20 6V20C20 21.1 19.1 22 18 22H6C4.9 22 4 21.1 4 20V6C4 4.9 4.9 4 6 4H8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <span class="ver-card-title">Data Input</span>
+                </div>
+                <div class="ver-fields" id="ver-fields-input">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Center: Data Referensi -->
+            <section class="ver-card ver-card-ref" id="ver-card-ref">
+                <div class="ver-card-header">
+                    <div class="ver-card-icon ver-card-icon-green">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="ver-card-title">Referensi Wali Kelas</span>
+                </div>
+                <div class="ver-fields" id="ver-fields-ref">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Right: Sidebar -->
+            <aside class="ver-sidebar">
+                <div class="sidebar-card card-info">
+                    <div class="sidebar-card-header">
+                        <div class="sidebar-icon sidebar-icon-purple">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="sidebar-card-title">Verifikasi Data</h3>
+                    </div>
+                    <p class="sidebar-card-text">
+                        Pada tahap ini tugasmu adalah melakukan <strong>verifikasi data</strong> untuk memastikan apakah data yang diinput sesuai dengan data referensi.
+                    </p>
+                </div>
+
+                <!-- Verification Options -->
+                <div class="sidebar-card card-options">
+                    <div class="sidebar-card-header">
+                        <div class="sidebar-icon sidebar-icon-blue">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="3" y="3" width="18" height="18" rx="4" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="sidebar-card-title">Hasil Verifikasi</h3>
+                    </div>
+
+                    <div class="ver-options" id="ver-options">
+                        <label class="ver-option" id="opt-benar">
+                            <input type="radio" name="verifikasi" value="benar">
+                            <span class="ver-option-radio"></span>
+                            <div class="ver-option-content">
+                                <span class="ver-option-title">Data Sudah Benar</span>
+                                <span class="ver-option-desc">Semua data sesuai dengan referensi</span>
+                            </div>
+                        </label>
+
+                        <label class="ver-option" id="opt-perbaikan">
+                            <input type="radio" name="verifikasi" value="perbaikan">
+                            <span class="ver-option-radio"></span>
+                            <div class="ver-option-content">
+                                <span class="ver-option-title">Perlu Perbaikan</span>
+                                <span class="ver-option-desc">Terdapat ketidaksesuaian minor</span>
+                            </div>
+                        </label>
+
+                        <label class="ver-option" id="opt-tidak-bisa">
+                            <input type="radio" name="verifikasi" value="tidak-bisa">
+                            <span class="ver-option-radio"></span>
+                            <div class="ver-option-content">
+                                <span class="ver-option-title">Tidak Bisa Diverifikasi</span>
+                                <span class="ver-option-desc">Data tidak lengkap atau tidak ditemukan</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Periksa Button -->
+                <button class="btn-action-primary btn-periksa-ver" id="btn-periksa" style="width:100%; display:none;">
+                    <span>Periksa Jawaban</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </aside>
+        </div>
+
+        <!-- Data Navigation (fixed bottom) -->
+        <div class="ver-nav-bar" id="ver-nav-bar">
+            <button class="btn-action-secondary" id="btn-kembali" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Kembali</span>
+            </button>
+            <div class="ver-dots" id="ver-dots">
+                <!-- Populated by JS -->
+            </div>
+            <button class="btn-action-primary" id="btn-next-data">
+                <span>Data Selanjutnya</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/verifikasi.js"></script>
+</body>
+</html>

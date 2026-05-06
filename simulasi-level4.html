@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 4: Pembersihan Data — Data Sim</title>
+    <meta name="description" content="Level 4 simulasi: Pembersihan data — tentukan status, edit, dan hapus data yang bermasalah.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/cleansing.css">
+</head>
+<body class="page-cleansing">
+
+    <!-- Top Bar -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <div class="topbar-title-group">
+                <h1 class="topbar-title">Level 4: Pembersihan Data</h1>
+                <div class="topbar-level-badge" id="topbar-level-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <span id="badge-difficulty-text">Pemula</span>
+                </div>
+            </div>
+            <div class="topbar-progress-pill" id="progress-pill">
+                <span class="progress-pill-label">Progress</span>
+                <span class="progress-pill-value" id="progress-pill-value">0/9</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stepper -->
+    <nav class="stepper">
+        <div class="stepper-inner">
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><span class="stepper-label">Identifikasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16.5" r="1" fill="currentColor"/></svg></div><span class="stepper-label">Validasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item completed"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/></svg></div><span class="stepper-label">Verifikasi</span></div>
+            <div class="stepper-line completed"></div>
+            <div class="stepper-item active"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M10 11V17M14 11V17M5 7L6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="stepper-label">Pembersihan</span></div>
+            <div class="stepper-line"></div>
+            <div class="stepper-item"><div class="stepper-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 11.08V12C21.99 14.52 21.13 16.96 19.58 18.91" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M22 4L12 14.01L9 11.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="stepper-label">Hasil</span></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="cl-main">
+        <div class="cl-container">
+
+            <!-- Top Section: Status Buttons + Info -->
+            <div class="cl-top-section">
+                <div class="cl-status-picker">
+                    <p class="cl-picker-hint">Pilih salah satu status di bawah lalu klik baris data untuk menerapkan:</p>
+                    <div class="cl-status-btns" id="status-btns">
+                        <button class="cl-status-btn" data-status="bersih" id="btn-status-bersih">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+                            <span>Data Bersih</span>
+                        </button>
+                        <button class="cl-status-btn" data-status="diedit" id="btn-status-diedit">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M17 3C17.55 2.45 18.29 2.13 19.09 2.13C19.89 2.13 20.63 2.45 21.18 3C21.73 3.55 22.05 4.29 22.05 5.09C22.05 5.89 21.73 6.63 21.18 7.18L7.82 20.54L2 22L3.46 16.18L17 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Data Diedit</span>
+                        </button>
+                        <button class="cl-status-btn" data-status="dihapus" id="btn-status-dihapus">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 6H21M8 6V4C8 3.45 8.45 3 9 3H15C15.55 3 16 3.45 16 4V6M19 6V20C19 20.55 18.55 21 18 21H6C5.45 21 5 20.55 5 20V6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Data Dihapus</span>
+                        </button>
+                        <button class="cl-status-btn" data-status="ditandai" id="btn-status-ditandai">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.46 18.63 1.93 19.42 2.65 19.42H21.35C22.07 19.42 22.54 18.63 22.18 18L13.71 3.86C13.35 3.23 12.39 3.23 12.03 3.86H10.29Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Ditandai</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="sidebar-card cl-info-card">
+                    <div class="sidebar-card-header">
+                        <div class="sidebar-icon sidebar-icon-purple">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 7H20M10 11V17M14 11V17M5 7L6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <h3 class="sidebar-card-title">Cleansing Data</h3>
+                    </div>
+                    <p class="sidebar-card-text">Pada tahap ini tugasmu adalah melakukan <strong>cleansing</strong> dengan cara menentukan status data, mengedit data yang masih salah, dan menghapus data yang tidak diperlukan.</p>
+                </div>
+            </div>
+
+            <!-- Data Table -->
+            <div class="cl-table-wrapper">
+                <table class="cl-table" id="cl-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>NIS</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Kelas</th>
+                            <th>No Telepon</th>
+                            <th>Status</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cl-tbody">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Periksa Button -->
+            <div class="cl-bottom-bar">
+                <button class="btn-action-primary btn-periksa-cl" id="btn-periksa" disabled>
+                    <span>Periksa Jawaban</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal: Edit Data -->
+    <div class="modal-overlay" id="modal-edit-overlay">
+        <div class="modal-content modal-edit" id="modal-edit">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17 3C17.55 2.45 18.29 2.13 19.09 2.13C19.89 2.13 20.63 2.45 21.18 3C21.73 3.55 22.05 4.29 22.05 5.09C22.05 5.89 21.73 6.63 21.18 7.18L7.82 20.54L2 22L3.46 16.18L17 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Edit Data Siswa
+                </h3>
+                <button class="modal-close" id="modal-edit-close">&times;</button>
+            </div>
+            <form class="modal-form" id="edit-form">
+                <div class="form-group">
+                    <label class="form-label">Nama</label>
+                    <input type="text" class="form-input" id="edit-nama">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">NIS</label>
+                    <input type="text" class="form-input" id="edit-nis">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Tanggal Lahir</label>
+                    <input type="text" class="form-input" id="edit-tgl" placeholder="DD/MM/YYYY">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Kelas</label>
+                    <input type="text" class="form-input" id="edit-kelas">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">No Telepon</label>
+                    <input type="text" class="form-input" id="edit-notelp">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-action-secondary" id="btn-edit-cancel">Batal</button>
+                    <button type="submit" class="btn-action-primary btn-save">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <span>Simpan</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal: Referensi Wali Kelas -->
+    <div class="modal-overlay" id="modal-ref-overlay">
+        <div class="modal-content modal-ref" id="modal-ref">
+            <div class="modal-header">
+                <h3 class="modal-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2"/><path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Referensi Wali Kelas
+                </h3>
+                <button class="modal-close" id="modal-ref-close">&times;</button>
+            </div>
+            <div class="ref-fields" id="ref-fields">
+                <!-- Populated by JS -->
+            </div>
+            <div class="ref-empty" id="ref-empty" style="display:none">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none"><path d="M12 9V13M12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/></svg>
+                <p>Data referensi tidak ditemukan untuk siswa ini.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+    <script src="js/cleansing.js"></script>
+</body>
+</html>

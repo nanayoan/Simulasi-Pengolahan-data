@@ -1,0 +1,402 @@
+/* ============================================
+   DATA SIM — Materi Pembelajaran Styles
+   ============================================ */
+
+.page-materi {
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* --- Page Header --- */
+.materi-header {
+    padding: 40px 0 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    animation: fadeInUp 0.5s ease both;
+}
+
+.materi-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-text);
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--color-primary), #6366F1, #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.materi-subtitle {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.materi-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--color-primary-bg);
+    color: var(--color-primary);
+    border-radius: 24px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 8px;
+}
+
+/* --- Topic Cards Grid --- */
+.materi-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 0;
+}
+
+/* --- Topic Card --- */
+.materi-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.materi-card:hover {
+    transform: translateY(-6px);
+}
+
+.materi-card:active {
+    transform: translateY(-2px) scale(0.99);
+}
+
+.materi-card-inner {
+    position: relative;
+    z-index: 2;
+    background: var(--color-white);
+    border: 1px solid rgba(229, 231, 235, 0.7);
+    border-radius: 24px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.35s ease;
+    box-shadow: 0 2px 16px rgba(74, 108, 247, 0.06), 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+.materi-card:hover .materi-card-inner {
+    border-color: transparent;
+    box-shadow: 0 12px 48px rgba(74, 108, 247, 0.12), 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Glow Effect */
+.materi-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 1;
+}
+
+.materi-card:hover .materi-card-glow {
+    opacity: 1;
+}
+
+.materi-glow-amber {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(251, 191, 36, 0.04));
+    box-shadow: 0 0 60px rgba(245, 158, 11, 0.1);
+}
+
+.materi-glow-green {
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.08), rgba(74, 222, 128, 0.04));
+    box-shadow: 0 0 60px rgba(52, 199, 89, 0.1);
+}
+
+.materi-glow-blue {
+    background: linear-gradient(135deg, rgba(74, 108, 247, 0.08), rgba(99, 102, 241, 0.04));
+    box-shadow: 0 0 60px rgba(74, 108, 247, 0.1);
+}
+
+.materi-glow-red {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(244, 63, 94, 0.04));
+    box-shadow: 0 0 60px rgba(239, 68, 68, 0.1);
+}
+
+/* Card Header */
+.materi-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.materi-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.materi-card:hover .materi-icon {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.materi-icon-amber {
+    background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+    color: #D97706;
+}
+
+.materi-icon-green {
+    background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+    color: #059669;
+}
+
+.materi-icon-blue {
+    background: linear-gradient(135deg, #EEF2FF, #DBEAFE);
+    color: var(--color-primary);
+}
+
+.materi-icon-red {
+    background: linear-gradient(135deg, #FEE2E2, #FECACA);
+    color: #DC2626;
+}
+
+.materi-card-number {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.04);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    transition: color 0.3s ease;
+}
+
+.materi-card:hover .materi-card-number {
+    color: rgba(0, 0, 0, 0.07);
+}
+
+/* Card Body */
+.materi-card-body {
+    flex: 1;
+}
+
+.materi-card-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.materi-card-desc {
+    font-size: 0.88rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+/* Card Footer */
+.materi-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.materi-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.materi-card-arrow {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+}
+
+.materi-card:hover .materi-card-arrow {
+    background: var(--color-primary);
+    color: white;
+    transform: translateX(4px);
+}
+
+/* --- Info Banner --- */
+.materi-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, var(--color-primary-bg), #E8E0FF);
+    border-radius: 20px;
+    margin-bottom: 100px;
+    border: 1px solid rgba(74, 108, 247, 0.1);
+    animation: fadeInUp 0.6s ease both;
+    animation-delay: 0.4s;
+    flex-wrap: wrap;
+}
+
+.materi-info-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(74, 108, 247, 0.1);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.materi-info-text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.materi-info-text strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 2px;
+}
+
+.materi-info-text span {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+.materi-info-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--color-primary), #6366F1);
+    color: white;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(74, 108, 247, 0.3);
+    flex-shrink: 0;
+}
+
+.materi-info-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(74, 108, 247, 0.4);
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.materi-card {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.materi-card:nth-child(1) { animation-delay: 0.1s; }
+.materi-card:nth-child(2) { animation-delay: 0.2s; }
+.materi-card:nth-child(3) { animation-delay: 0.3s; }
+.materi-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* --- Responsive: Tablet (≥ 768px) --- */
+@media (min-width: 768px) {
+    .materi-header {
+        padding: 48px 0 12px;
+    }
+
+    .materi-title {
+        font-size: 2.5rem;
+    }
+
+    .materi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .materi-card:last-child {
+        grid-column: span 1;
+    }
+}
+
+/* --- Responsive: Desktop (≥ 1024px) --- */
+@media (min-width: 1024px) {
+    .materi-header {
+        padding: 56px 0 16px;
+    }
+
+    .materi-title {
+        font-size: 2.75rem;
+    }
+
+    .materi-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .materi-card-inner {
+        padding: 32px;
+    }
+
+    .materi-info {
+        flex-wrap: nowrap;
+    }
+}
+
+/* --- Responsive: Mobile Small (≤ 380px) --- */
+@media (max-width: 380px) {
+    .materi-title {
+        font-size: 1.6rem;
+    }
+
+    .materi-card-inner {
+        padding: 22px;
+    }
+
+    .materi-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .materi-card-title {
+        font-size: 1.1rem;
+    }
+
+    .materi-info {
+        padding: 16px;
+        gap: 12px;
+    }
+}

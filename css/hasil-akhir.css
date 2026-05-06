@@ -1,0 +1,415 @@
+/* ============================================
+   DATA SIM — Hasil Akhir (Final Summary)
+   ============================================ */
+
+.page-hasil-akhir {
+    background: var(--color-bg);
+    min-height: 100vh;
+}
+
+.ha-main { padding: 20px 0 60px; }
+
+.ha-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Overall Score Card --- */
+.ha-score-card {
+    background: var(--color-white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.ha-score-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 24px 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.ha-trophy { position: relative; margin-bottom: 16px; }
+
+.ha-trophy-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary-bg), rgba(99, 102, 241, 0.15));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    animation: trophyPulse 2s ease-in-out infinite;
+}
+
+.ha-trophy-icon.gold {
+    background: linear-gradient(135deg, #FFF7ED, #FDE68A);
+    color: #D97706;
+}
+
+.ha-trophy-icon.green {
+    background: linear-gradient(135deg, var(--color-green-bg), rgba(16, 185, 129, 0.2));
+    color: var(--color-green);
+}
+
+.ha-trophy-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(74, 108, 247, 0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@keyframes trophyPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.ha-score-number-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    margin-bottom: 8px;
+}
+
+.ha-score-number {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.ha-score-number.gold { color: #D97706; }
+.ha-score-number.green { color: var(--color-green); }
+
+.ha-score-percent {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-text-muted);
+}
+
+.ha-score-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.ha-score-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.ha-confetti {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* --- Section Titles --- */
+.ha-section { margin-bottom: 28px; }
+
+.ha-section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-bottom: 14px;
+    padding-left: 2px;
+}
+
+.ha-section-title svg { color: var(--color-primary); }
+
+/* --- Level Cards Grid --- */
+.ha-levels-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.ha-level-card {
+    background: var(--color-white);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.ha-level-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.ha-level-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ha-level-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
+.ha-level-name {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.ha-level-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ha-level-icon.blue { background: var(--color-primary-bg); color: var(--color-primary); }
+.ha-level-icon.green { background: var(--color-green-bg); color: var(--color-green); }
+.ha-level-icon.purple { background: rgba(139, 92, 246, 0.1); color: #8B5CF6; }
+.ha-level-icon.amber { background: #FFF7ED; color: #D97706; }
+
+.ha-level-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ha-level-score {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--color-text);
+}
+
+.ha-level-score span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+.ha-level-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ha-level-badge.sempurna { background: linear-gradient(135deg, #FDE68A, #FCD34D); color: #92400E; }
+.ha-level-badge.sangat-baik { background: var(--color-green-bg); color: var(--color-green); }
+.ha-level-badge.baik { background: var(--color-primary-bg); color: var(--color-primary); }
+.ha-level-badge.cukup { background: #FFF7ED; color: #D97706; }
+.ha-level-badge.kurang { background: #FEE2E2; color: #EF4444; }
+
+/* --- Analisis Kualitas Data --- */
+.ha-quality-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    padding: 24px;
+}
+
+.ha-health-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.ha-health-score {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.ha-health-percent {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-text-muted);
+    margin-right: 6px;
+}
+
+.ha-health-meta { flex: 1; }
+
+.ha-health-label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.ha-health-desc {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
+/* Quality Bars */
+.ha-quality-bars { display: flex; flex-direction: column; gap: 18px; }
+
+.ha-quality-item {
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.4s ease;
+}
+
+.ha-quality-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ha-quality-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.ha-quality-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ha-quality-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.ha-quality-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.ha-quality-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ha-quality-pct {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--color-text);
+}
+
+.ha-quality-badge {
+    padding: 3px 10px;
+    border-radius: 16px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ha-quality-track {
+    height: 8px;
+    border-radius: 4px;
+    background: var(--color-bg);
+    overflow: hidden;
+}
+
+.ha-quality-fill {
+    height: 100%;
+    border-radius: 4px;
+    width: 0;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Actions --- */
+.ha-actions {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.ha-btn-finish {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, var(--color-primary), #6366F1);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: 0 4px 20px rgba(74, 108, 247, 0.3);
+    width: 100%;
+    justify-content: center;
+}
+
+.ha-btn-finish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(74, 108, 247, 0.4);
+}
+
+.ha-btn-finish:active { transform: translateY(0); }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .ha-container { padding: 0 14px; }
+    .ha-score-inner { padding: 28px 20px 24px; }
+    .ha-score-number { font-size: 2.8rem; }
+    .ha-score-title { font-size: 1.15rem; }
+    .ha-quality-card { padding: 20px; }
+    .ha-health-score { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .ha-levels-grid { grid-template-columns: 1fr; }
+    .ha-score-number { font-size: 2.4rem; }
+    .ha-container { padding: 0 10px; }
+    .ha-score-inner { padding: 24px 16px 20px; }
+    .ha-score-title { font-size: 1.05rem; }
+    .ha-score-subtitle { font-size: 0.78rem; }
+    .ha-level-card { padding: 16px; }
+    .ha-level-score { font-size: 1.2rem; }
+    .ha-quality-card { padding: 16px; }
+    .ha-health-score { font-size: 1.8rem; }
+    .ha-btn-finish { padding: 14px 28px; font-size: 0.92rem; }
+}

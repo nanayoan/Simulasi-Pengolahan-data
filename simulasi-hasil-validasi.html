@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Validasi Data — Data Sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/hasil.css">
+</head>
+<body class="page-hasil">
+
+    <!-- Top Bar -->
+    <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+            <h1 class="topbar-title">Hasil Validasi Data</h1>
+            <span class="topbar-level-pill">Level 2</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="hasil-main" id="main-content">
+        <div class="hasil-container">
+
+            <!-- Score Card -->
+            <section class="score-card" id="score-card">
+                <div class="score-card-inner">
+                    <div class="trophy-wrapper" id="trophy-wrapper">
+                        <div class="trophy-icon" id="trophy-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M8 21H16M12 17V21M6 3H18V7C18 10.3137 15.3137 13 12 13C8.68629 13 6 10.3137 6 7V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 7H3V9C3 10.6569 4.34315 12 6 12V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M18 7H21V9C21 10.6569 19.6569 12 18 12V7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="trophy-glow"></div>
+                    </div>
+                    <div class="score-percentage" id="score-percentage">
+                        <span class="score-number" id="score-number">0</span>
+                        <span class="score-percent">% SCORE</span>
+                    </div>
+                    <h2 class="score-title" id="score-title">Memuat...</h2>
+                    <p class="score-subtitle" id="score-subtitle">Menghitung hasil validasimu...</p>
+                    <div class="progress-section" id="progress-section">
+                        <div class="progress-header">
+                            <span class="progress-label">Progress Validasi</span>
+                            <span class="progress-value" id="progress-value">0%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <p class="progress-detail" id="progress-detail">Menghitung...</p>
+                    </div>
+                </div>
+                <canvas id="confetti-canvas"></canvas>
+            </section>
+
+            <!-- Stats Row -->
+            <div class="stats-row" id="stats-row">
+                <div class="stat-card stat-correct" id="stat-correct">
+                    <div class="stat-header">
+                        <span class="stat-label">BENAR</span>
+                        <div class="stat-icon-badge stat-icon-green">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-value">
+                        <span class="stat-number" id="stat-correct-num">0</span>
+                        <span class="stat-unit">Tervalidasi</span>
+                    </div>
+                </div>
+                <div class="stat-card stat-wrong" id="stat-wrong">
+                    <div class="stat-header">
+                        <span class="stat-label">SALAH / TERLEWAT</span>
+                        <div class="stat-icon-badge stat-icon-red">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="stat-value">
+                        <span class="stat-number" id="stat-wrong-num">0</span>
+                        <span class="stat-unit">Perlu Perbaikan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Results -->
+            <section class="detail-section" id="detail-section">
+                <h3 class="detail-title">Detail Hasil</h3>
+                <div class="detail-list" id="detail-list"></div>
+            </section>
+
+            <!-- Action Button -->
+            <div class="hasil-actions" id="hasil-actions">
+                <button class="btn-primary" id="btn-next-level">
+                    <span>Level Berikutnya</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/hasil-validasi.js"></script>
+</body>
+</html>
