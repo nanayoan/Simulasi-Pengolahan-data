@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Data — Data Sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materi-detail.css">
+</head>
+<body>
+<div class="materi-topbar">
+    <div class="materi-topbar-inner">
+        <a href="materi.html" class="materi-back-btn" title="Kembali"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="materi-topbar-title">Validasi Data</span>
+        <span class="materi-topbar-badge badge-amber">Materi 2 / 4</span>
+    </div>
+</div>
+
+<article class="materi-article">
+    <header class="materi-article-header">
+        <span class="materi-article-number badge-amber">Materi 02</span>
+        <h1 class="materi-article-title">Validasi Data</h1>
+        <p class="materi-article-desc">Pelajari cara memeriksa dan memverifikasi apakah setiap nilai dalam kumpulan data telah memenuhi aturan, standar, format, dan batasan yang telah ditetapkan.</p>
+    </header>
+
+    <!-- A. Pengantar dan Definisi -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">A</span> Pengantar dan Definisi</h2>
+        <p class="materi-text">Setelah proses identifikasi data selesai dilakukan dan seluruh data yang bermasalah telah tercatat, langkah berikutnya dalam siklus pengolahan data adalah <strong>validasi data</strong>. Jika identifikasi data berfokus pada menemukan data yang bermasalah, maka validasi data berfokus pada memastikan bahwa setiap nilai data telah memenuhi aturan dan standar yang telah ditetapkan secara formal.</p>
+        <p class="materi-text">Validasi data merupakan proses yang lebih terstruktur dibandingkan identifikasi, karena setiap pemeriksaan didasarkan pada <strong>aturan validasi</strong> yang telah didefinisikan sebelumnya. Aturan-aturan ini menjadi tolok ukur objektif dalam menentukan apakah suatu data dinyatakan valid atau tidak valid.</p>
+        <div class="materi-highlight highlight-info">
+            <div class="materi-highlight-title">📘 Definisi</div>
+            <p class="materi-text"><strong>Validasi data</strong> adalah proses memeriksa dan memverifikasi apakah setiap nilai dalam kumpulan data telah memenuhi aturan, standar, format, dan batasan yang telah ditetapkan untuk kolom tersebut.</p>
+        </div>
+        <div class="materi-highlight highlight-success">
+            <div class="materi-highlight-title">🎯 Hasil Validasi</div>
+            <p class="materi-text">Setiap entri data akan memiliki status: <strong>valid</strong> (memenuhi semua aturan), <strong>tidak valid karena format</strong>, <strong>tidak valid karena data tidak lengkap</strong>, atau <strong>tidak valid karena nomor tidak sesuai</strong>.</p>
+        </div>
+    </section>
+
+    <!-- B. Tujuan -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">B</span> Tujuan dan Pentingnya Validasi Data</h2>
+        <p class="materi-text">Validasi data memiliki peran krusial dalam memastikan integritas dan keandalan data sebelum digunakan lebih lanjut. Tanpa validasi yang memadai, data yang tampak lengkap secara visual sekalipun dapat mengandung kesalahan yang tidak terdeteksi.</p>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Memastikan Kebenaran Format</div><div class="flow-desc">Memastikan setiap nilai ditulis dalam format yang telah disepakati, sehingga sistem dapat memproses data secara konsisten.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Memastikan Kelengkapan Data</div><div class="flow-desc">Memverifikasi bahwa tidak ada kolom wajib yang kosong atau terlewat.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Memastikan Keabsahan Nilai</div><div class="flow-desc">Memeriksa apakah nilai setiap kolom berada dalam rentang, tipe, dan pola yang diizinkan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Mencegah Kesalahan Berlanjut</div><div class="flow-desc">Menghentikan data yang tidak memenuhi syarat agar tidak masuk ke tahap selanjutnya.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Meningkatkan Kepercayaan terhadap Data</div><div class="flow-desc">Data yang telah divalidasi memberikan jaminan kualitas yang lebih tinggi untuk analisis dan laporan.</div></div></div>
+        </div>
+    </section>
+
+    <!-- C. Aturan Validasi -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">C</span> Aturan-Aturan Validasi Data</h2>
+        <p class="materi-text">Sebelum melakukan validasi, diperlukan seperangkat aturan yang jelas dan terdokumentasi untuk setiap kolom data. Berikut contoh aturan validasi untuk data siswa:</p>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>Kolom</th><th>Aturan Validasi</th><th>Contoh Valid</th><th>Contoh Tidak Valid</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>NIS</strong></td><td>7 digit angka; tidak boleh kosong; harus unik</td><td class="cell-ok">2024001</td><td class="cell-error">202400 (6 digit)</td></tr>
+                    <tr><td><strong>Nama</strong></td><td>Hanya huruf dan spasi; tidak boleh kosong</td><td class="cell-ok">Andi Wijaya</td><td class="cell-error">Budi 123</td></tr>
+                    <tr><td><strong>Tgl Lahir</strong></td><td>Format DD/MM/YYYY; tanggal valid; tidak boleh kosong</td><td class="cell-ok">12/05/2008</td><td class="cell-error">2008-07-15</td></tr>
+                    <tr><td><strong>Kelas</strong></td><td>Format X-XXX; tidak boleh kosong</td><td class="cell-ok">X-TKJ</td><td class="cell-error">XTKJ, X TKJ</td></tr>
+                    <tr><td><strong>No. Telp</strong></td><td>10-12 digit angka; diawali '08'; tidak boleh kosong</td><td class="cell-ok">08123456789</td><td class="cell-error">08133445 (8 digit)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="materi-highlight highlight-warning">
+            <div class="materi-highlight-title">⚡ Catatan Penting</div>
+            <p class="materi-text">Aturan validasi harus didefinisikan dan didokumentasikan <strong>sebelum</strong> proses validasi dimulai. Pada dunia kerja, aturan ini biasanya tercantum dalam dokumen <em>Data Dictionary</em> atau <em>Data Validation Rules</em>.</p>
+        </div>
+    </section>
+
+    <!-- D. Jenis Validasi -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">D</span> Jenis-Jenis Validasi Data</h2>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">1. Validasi Kelengkapan (Completeness Validation)</h3>
+        <p class="materi-text">Memeriksa apakah semua kolom wajib telah terisi dengan nilai. Setiap kolom mandatory yang kosong dinyatakan tidak valid.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh</div>
+            <div style="margin-bottom:10px;"><span class="example-tag tag-ok">✓ Valid</span><p class="materi-text" style="font-size:0.82rem;">Semua kolom terisi: NIS, Nama, Tgl Lahir, Kelas, No Telp → Lulus validasi kelengkapan</p></div>
+            <div><span class="example-tag tag-error">✗ Tidak Valid</span><p class="materi-text" style="font-size:0.82rem;">Kolom Nama kosong meskipun kolom lain terisi lengkap → Gagal: data tidak lengkap</p></div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">2. Validasi Format (Format Validation)</h3>
+        <p class="materi-text">Memeriksa apakah nilai yang tercatat mengikuti pola penulisan standar. Data yang isinya benar namun formatnya salah tetap dinyatakan tidak valid.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh</div>
+            <div style="margin-bottom:10px;"><span class="example-tag tag-ok">✓ Valid</span><div class="example-row"><span class="example-field field-ok">Tgl Lahir: 15/07/2008</span></div><p class="materi-text" style="font-size:0.82rem;color:#059669;">Format DD/MM/YYYY sesuai standar</p></div>
+            <div><span class="example-tag tag-error">✗ Tidak Valid</span><div class="example-row"><span class="example-field field-error">Tgl Lahir: 2008-07-15</span></div><p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Format YYYY-MM-DD tidak sesuai</p></div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">3. Validasi Tipe Data (Data Type Validation)</h3>
+        <p class="materi-text">Memeriksa apakah nilai sesuai dengan tipe data yang diharapkan. Misalnya, kolom Nama seharusnya hanya berisi huruf, bukan angka.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh</div>
+            <div style="margin-bottom:10px;"><span class="example-tag tag-ok">✓ Valid</span><div class="example-row"><span class="example-field field-ok">Nama: Budi Santoso</span></div></div>
+            <div><span class="example-tag tag-error">✗ Tidak Valid</span><div class="example-row"><span class="example-field field-error">Nama: Budi 123</span></div><p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Mengandung angka — tipe data tidak sesuai</p></div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">4. Validasi Rentang dan Logika (Range & Logic Validation)</h3>
+        <p class="materi-text">Memeriksa apakah nilai berada dalam batas minimum dan maksimum yang diizinkan serta masuk akal secara kontekstual.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh</div>
+            <div style="margin-bottom:10px;"><span class="example-tag tag-ok">✓ Valid</span><div class="example-row"><span class="example-field field-ok">No Telp: 08123456789 (11 digit, diawali 08)</span></div></div>
+            <div><span class="example-tag tag-error">✗ Tidak Valid</span><div class="example-row"><span class="example-field field-error">No Telp: 08133445 (hanya 8 digit)</span></div><p class="materi-text" style="font-size:0.82rem;color:#DC2626;">Kurang dari minimum 10 digit</p></div>
+        </div>
+    </section>
+
+    <!-- E. Perbedaan -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">E</span> Perbedaan Validasi dan Identifikasi Data</h2>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>Aspek</th><th>Identifikasi Data</th><th>Validasi Data</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Tujuan</strong></td><td>Menemukan dan mencatat data bermasalah secara umum</td><td>Memeriksa apakah data memenuhi aturan formal</td></tr>
+                    <tr><td><strong>Dasar</strong></td><td>Pengamatan visual dan pengetahuan umum</td><td>Aturan validasi yang terdefinisi eksplisit</td></tr>
+                    <tr><td><strong>Output</strong></td><td>Daftar data bermasalah + kategori masalah</td><td>Status validasi: valid / tidak valid + alasan</td></tr>
+                    <tr><td><strong>Urutan</strong></td><td>Tahap pertama</td><td>Tahap kedua (setelah identifikasi)</td></tr>
+                    <tr><td><strong>Sifat</strong></td><td>Eksploratif — menemukan masalah</td><td>Sistematis — memeriksa berdasarkan aturan</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- F. Contoh Kasus -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">F</span> Contoh Kasus: Validasi Data Siswa</h2>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>No</th><th>Nama</th><th>NIS</th><th>Tgl Lahir</th><th>Kelas</th><th>No Telp</th><th>Status</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Andi Wijaya</td><td>2024001</td><td>12/05/2008</td><td>X-TKJ</td><td>08123456789</td><td class="cell-ok">✔ Valid</td></tr>
+                    <tr><td>2</td><td class="cell-error">Budi 123</td><td>2024002</td><td>10/10/2009</td><td>X-TKJ</td><td>08199867766</td><td class="cell-error">✗ Tidak Valid</td></tr>
+                    <tr><td>3</td><td class="cell-error">(kosong)</td><td>2024003</td><td>15/01/2008</td><td>X-TKJ</td><td>08521234432</td><td class="cell-error">⚠ Tidak Lengkap</td></tr>
+                    <tr><td>4</td><td>Dewi Sartika</td><td>2024005</td><td>22/03/2010</td><td class="cell-error">XTKJ</td><td>08123456781</td><td class="cell-error">✗ Tidak Valid</td></tr>
+                    <tr><td>5</td><td>Eko Prasetyo</td><td>2024006</td><td>05/12/2007</td><td>X-TKJ</td><td class="cell-error">08133445</td><td class="cell-error">✗ Tidak Valid</td></tr>
+                    <tr><td>6</td><td>Fani Rahayu</td><td>2024007</td><td class="cell-error">2008-07-15</td><td>X-TKJ</td><td>08133344455</td><td class="cell-error">✗ Tidak Valid</td></tr>
+                    <tr><td>7</td><td>Gita Sari</td><td>2024008</td><td>05/12/2007</td><td>X-TKJ</td><td>08133344455</td><td class="cell-ok">✔ Valid</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- G. Langkah-Langkah -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">G</span> Langkah-Langkah Validasi Data</h2>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Siapkan Daftar Aturan Validasi</div><div class="flow-desc">Kumpulkan dan dokumentasikan seluruh aturan validasi yang berlaku untuk setiap kolom data, mencakup kelengkapan, format, tipe data, dan rentang nilai.</div></div></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Periksa Setiap Entri Satu per Satu</div><div class="flow-desc">Validasi dilakukan per baris, bukan per kolom. Setiap baris diperiksa terhadap seluruh aturan sebelum berpindah ke baris berikutnya.</div></div></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Terapkan Setiap Jenis Validasi</div><div class="flow-desc">Terapkan secara berurutan: kelengkapan → format → tipe data → rentang dan logika.</div></div></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Tentukan Status Validasi</div><div class="flow-desc">Setiap entri mendapat status: Data valid, Format tidak konsisten, Data tidak lengkap, atau Nomor tidak valid.</div></div></div>
+            <div class="flow-step"><div class="flow-number">5</div><div class="flow-content"><div class="flow-title">Catat Alasan Ketidakvalidan</div><div class="flow-desc">Untuk setiap entri tidak valid, catat secara spesifik aturan mana yang dilanggar dan nilai yang seharusnya.</div></div></div>
+            <div class="flow-step"><div class="flow-number">6</div><div class="flow-content"><div class="flow-title">Buat Rekapitulasi Hasil Validasi</div><div class="flow-desc">Ringkasan jumlah data valid, tidak valid, dan tidak lengkap beserta distribusi jenis kesalahan.</div></div></div>
+        </div>
+    </section>
+
+    <!-- H. Ringkasan -->
+    <section class="materi-section">
+        <div class="materi-summary">
+            <div class="materi-summary-title">📝 Ringkasan</div>
+            <ol>
+                <li><strong>Validasi data</strong> adalah proses memeriksa apakah setiap nilai data telah memenuhi aturan, standar, format, dan batasan yang ditetapkan.</li>
+                <li>Terdapat <strong>empat jenis validasi</strong>: kelengkapan, format, tipe data, dan rentang & logika.</li>
+                <li>Aturan validasi yang baik harus bersifat <strong>jelas, dapat diukur, relevan, konsisten, dan terdokumentasi</strong>.</li>
+                <li>Validasi berbeda dari identifikasi: identifikasi bersifat <strong>eksploratif</strong>, validasi bersifat <strong>sistematis</strong>.</li>
+                <li>Hasil validasi menjadi dasar bagi tahap <strong>verifikasi</strong> dan <strong>pembersihan</strong> data.</li>
+                <li>Prinsip validasi berlaku universal — dapat diterapkan pada data siswa, transaksi, produk, maupun jenis data lainnya.</li>
+            </ol>
+        </div>
+    </section>
+
+    <nav class="materi-bottom-nav">
+        <a href="materi-identifikasi.html" class="materi-nav-btn btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Identifikasi Data</a>
+        <a href="assets/images/Materi_2_Validasi_Data.pdf" target="_blank" class="materi-nav-btn btn-pdf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/><path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/></svg> Lihat PDF</a>
+        <a href="materi-verifikasi.html" class="materi-nav-btn btn-next">Verifikasi Data <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+    </nav>
+</article>
+</body>
+</html>

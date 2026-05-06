@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifikasi Data — Data Sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materi-detail.css">
+</head>
+<body>
+<div class="materi-topbar">
+    <div class="materi-topbar-inner">
+        <a href="materi.html" class="materi-back-btn" title="Kembali"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="materi-topbar-title">Verifikasi Data</span>
+        <span class="materi-topbar-badge badge-blue">Materi 3 / 4</span>
+    </div>
+</div>
+
+<article class="materi-article">
+    <header class="materi-article-header">
+        <span class="materi-article-number badge-blue">Materi 03</span>
+        <h1 class="materi-article-title">Verifikasi Data</h1>
+        <p class="materi-article-desc">Pelajari cara membandingkan data input dengan data referensi yang terpercaya untuk memastikan kebenaran isi data.</p>
+    </header>
+
+    <!-- A -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">A</span> Pengantar dan Definisi</h2>
+        <p class="materi-text">Setelah proses validasi selesai dan setiap entri data telah memiliki status validasi yang jelas, tahap berikutnya adalah <strong>verifikasi data</strong>. Berbeda dengan validasi yang berfokus pada memeriksa apakah data memenuhi aturan format dan standar, verifikasi data berfokus pada memastikan apakah <strong>isi data tersebut benar dan sesuai dengan sumber referensi</strong> yang terpercaya.</p>
+        <p class="materi-text">Data yang secara format sudah benar <strong>belum tentu</strong> memiliki isi yang akurat. Sebagai contoh, nama siswa mungkin hanya menggunakan huruf (lolos validasi), namun nama tersebut bisa jadi salah ketik atau tidak sesuai dengan nama asli yang tercatat di dokumen resmi.</p>
+        <div class="materi-highlight highlight-info">
+            <div class="materi-highlight-title">📘 Definisi</div>
+            <p class="materi-text"><strong>Verifikasi data</strong> adalah proses membandingkan data yang sedang diperiksa (data input) dengan data referensi yang terpercaya untuk memastikan bahwa isi data tersebut benar, akurat, dan sesuai dengan kondisi yang sebenarnya.</p>
+        </div>
+        <div class="materi-highlight highlight-warning">
+            <div class="materi-highlight-title">💡 Ilustrasi</div>
+            <p class="materi-text">Data siswa NIS: 2024001, Nama: "Andi Wijaya" lolos validasi karena formatnya benar. Namun, data referensi wali kelas menunjukkan nama sebenarnya adalah "Andi <strong>Widjaja</strong>". Kesalahan ini hanya ditemukan melalui verifikasi!</p>
+        </div>
+    </section>
+
+    <!-- B -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">B</span> Tujuan Verifikasi Data</h2>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Memastikan Kebenaran Isi Data</div><div class="flow-desc">Memverifikasi bahwa nilai yang tercatat benar-benar mencerminkan kondisi nyata, bukan hanya kesesuaian format.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Mendeteksi Kesalahan yang Lolos Validasi</div><div class="flow-desc">Menemukan kesalahan seperti nama salah eja atau tanggal lahir keliru yang formatnya benar.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Membangun Kepercayaan terhadap Data</div><div class="flow-desc">Data terverifikasi memiliki tingkat jaminan keakuratan yang lebih tinggi.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Menjadi Dasar Pembersihan yang Tepat</div><div class="flow-desc">Hasil verifikasi menunjukkan bagian mana yang perlu diperbaiki pada tahap pembersihan.</div></div></div>
+        </div>
+    </section>
+
+    <!-- C -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">C</span> Perbedaan Identifikasi, Validasi, dan Verifikasi</h2>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>Aspek</th><th>Identifikasi</th><th>Validasi</th><th>Verifikasi</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Pertanyaan</strong></td><td>Masalah apa yang ada?</td><td>Apakah data memenuhi aturan?</td><td>Apakah isi data sesuai kenyataan?</td></tr>
+                    <tr><td><strong>Metode</strong></td><td>Pengamatan visual</td><td>Pengecekan aturan validasi</td><td>Perbandingan dengan referensi</td></tr>
+                    <tr><td><strong>Fokus</strong></td><td>Menemukan masalah umum</td><td>Memeriksa format & kelengkapan</td><td>Memastikan kebenaran isi</td></tr>
+                    <tr><td><strong>Sumber Acuan</strong></td><td>Pengetahuan umum</td><td>Data Dictionary</td><td>Data referensi resmi</td></tr>
+                    <tr><td><strong>Urutan</strong></td><td>Tahap 1</td><td>Tahap 2</td><td>Tahap 3</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="materi-highlight highlight-success">
+            <div class="materi-highlight-title">🔗 Saling Melengkapi</div>
+            <p class="materi-text">Data yang lolos validasi <strong>belum tentu</strong> lolos verifikasi. Ketiga proses ini memberikan lapisan jaminan kualitas yang berbeda dan saling memperkuat.</p>
+        </div>
+    </section>
+
+    <!-- D -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">D</span> Sumber Referensi</h2>
+        <p class="materi-text">Kunci utama verifikasi adalah ketersediaan sumber referensi yang <strong>otoritatif, terkini, dapat dipercaya, dan dapat diakses</strong>.</p>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>Jenis Data</th><th>Sumber Referensi</th><th>Contoh Verifikasi</th></tr></thead>
+                <tbody>
+                    <tr><td>Data Siswa</td><td>Catatan wali kelas, buku induk</td><td>Bandingkan nama & NIS dengan buku induk</td></tr>
+                    <tr><td>Data Pegawai</td><td>KTP, ijazah, sistem kepegawaian</td><td>Pastikan nama & tgl lahir sesuai KTP</td></tr>
+                    <tr><td>Data Transaksi</td><td>Nota, kuitansi, sistem kasir</td><td>Cocokan total harga dengan nota</td></tr>
+                    <tr><td>Data Produk</td><td>Katalog resmi, daftar harga supplier</td><td>Verifikasi harga sesuai katalog</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- E -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">E</span> Jenis-Jenis Verifikasi Data</h2>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">1. Verifikasi Konsistensi</h3>
+        <p class="materi-text">Memeriksa apakah nilai yang sama konsisten di seluruh kumpulan data. Contoh: Siswa NIS 2024001 tercatat X-TKJ di tabel utama tetapi X-RPL di tabel nilai.</p>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">2. Verifikasi Silang</h3>
+        <p class="materi-text">Membandingkan data dari satu sumber dengan sumber lain yang independen. Contoh: Data dari formulir pendaftaran dibandingkan dengan kartu keluarga.</p>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">3. Verifikasi Referensi</h3>
+        <p class="materi-text">Membandingkan data input dengan data dari sumber referensi resmi yang ditetapkan sebagai standar kebenaran.</p>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">4. Verifikasi Logika</h3>
+        <p class="materi-text">Memeriksa apakah hubungan antar nilai masuk akal. Contoh: Siswa lahir 2015 terdaftar di kelas X SMK — secara logika terlalu muda.</p>
+    </section>
+
+    <!-- F -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">F</span> Status Hasil Verifikasi</h2>
+        <div class="materi-example">
+            <div class="materi-example-title">✔ Data Sudah Benar</div>
+            <p class="materi-text" style="font-size:0.85rem;">Seluruh nilai dalam entri data sesuai dengan data referensi. Tidak ada perbedaan pada satu kolom pun. Data dapat langsung diteruskan ke tahap pembersihan dengan status bersih.</p>
+        </div>
+        <div class="materi-example" style="margin-top:12px;">
+            <div class="materi-example-title">⚠ Perlu Perbaikan</div>
+            <p class="materi-text" style="font-size:0.85rem;">Terdapat satu atau lebih perbedaan antara data input dengan data referensi (nama salah eja, kelas keliru, dll). Data perlu diperbaiki pada tahap pembersihan.</p>
+        </div>
+        <div class="materi-example" style="margin-top:12px;">
+            <div class="materi-example-title">✗ Tidak Bisa Diverifikasi</div>
+            <p class="materi-text" style="font-size:0.85rem;">Data referensi tidak tersedia, tidak lengkap, atau tidak ditemukan. Data perlu dilengkapi terlebih dahulu atau dicari sumber referensi tambahan.</p>
+        </div>
+    </section>
+
+    <!-- G -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">G</span> Contoh Kasus: Verifikasi Data Siswa</h2>
+        <p class="materi-text">Perbandingan data input dari sistem dengan data referensi wali kelas:</p>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>No</th><th>Nama (Input)</th><th>Nama (Referensi)</th><th>Status</th><th>Perbedaan</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Andi Wijaya</td><td>Andi Wijaya</td><td class="cell-ok">✔ Benar</td><td>—</td></tr>
+                    <tr><td>2</td><td class="cell-error">Budi123 Santoso</td><td>Budi Santoso</td><td class="cell-error">⚠ Perbaikan</td><td>Nama ada angka; Kelas & No Telp beda</td></tr>
+                    <tr><td>3</td><td class="cell-error">Citra Dewi</td><td>Citra Lestari</td><td class="cell-error">⚠ Perbaikan</td><td>Nama & NIS & Kelas berbeda</td></tr>
+                    <tr><td>4</td><td>Dewi Sartika</td><td>Dewi Sartika</td><td class="cell-ok">✔ Benar</td><td>—</td></tr>
+                    <tr><td>5</td><td>Eko Prasetyo</td><td>Eko Prasetyo</td><td class="cell-error">⚠ Perbaikan</td><td>No Telp berbeda</td></tr>
+                    <tr><td>6</td><td class="cell-error">(Kosong)</td><td>Tidak Ditemukan</td><td class="cell-error">✗ Tidak bisa diverifikasi</td><td>Nama kosong, tidak ada padanan</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- H -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">H</span> Langkah-Langkah Verifikasi Data</h2>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Siapkan Data Input dan Data Referensi</div><div class="flow-desc">Pastikan kedua sumber tersedia dan referensi bersifat otoritatif, terkini, dan dapat dipercaya.</div></div></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Tentukan Kolom yang Diverifikasi</div><div class="flow-desc">Fokus pada kolom kritis yang berdampak signifikan jika terjadi kesalahan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Bandingkan Setiap Entri Satu per Satu</div><div class="flow-desc">Temukan entri bersesuaian di referensi (berdasarkan NIS/ID), lalu bandingkan setiap kolom.</div></div></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Periksa Ketersediaan Data Referensi</div><div class="flow-desc">Jika referensi tidak ditemukan, entri tersebut diberi status "Tidak Bisa Diverifikasi".</div></div></div>
+            <div class="flow-step"><div class="flow-number">5</div><div class="flow-content"><div class="flow-title">Catat Setiap Perbedaan</div><div class="flow-desc">Catat kolom berbeda, nilai di sistem, dan nilai seharusnya berdasarkan referensi.</div></div></div>
+            <div class="flow-step"><div class="flow-number">6</div><div class="flow-content"><div class="flow-title">Tentukan Status Verifikasi</div><div class="flow-desc">Data Sudah Benar, Perlu Perbaikan, atau Tidak Bisa Diverifikasi.</div></div></div>
+            <div class="flow-step"><div class="flow-number">7</div><div class="flow-content"><div class="flow-title">Dokumentasikan dan Teruskan</div><div class="flow-desc">Buat laporan hasil verifikasi sebagai panduan tahap pembersihan data.</div></div></div>
+        </div>
+    </section>
+
+    <!-- I -->
+    <section class="materi-section">
+        <div class="materi-summary">
+            <div class="materi-summary-title">📝 Ringkasan</div>
+            <ol>
+                <li><strong>Verifikasi data</strong> adalah proses membandingkan data input dengan data referensi terpercaya untuk memastikan kebenaran isi data.</li>
+                <li>Verifikasi menjawab pertanyaan yang <strong>tidak bisa dijawab validasi</strong>: apakah nilai yang tercatat sudah benar?</li>
+                <li>Sumber referensi harus bersifat <strong>otoritatif, terkini, dapat dipercaya, dan dapat diakses</strong>.</li>
+                <li>Terdapat <strong>empat jenis verifikasi</strong>: konsistensi, silang, referensi, dan logika.</li>
+                <li>Setiap entri mendapat salah satu dari <strong>tiga status</strong>: Data Sudah Benar, Perlu Perbaikan, atau Tidak Bisa Diverifikasi.</li>
+                <li>Verifikasi adalah tahap ketiga dalam siklus, menjadi dasar bagi tahap <strong>pembersihan data</strong>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <nav class="materi-bottom-nav">
+        <a href="materi-validasi.html" class="materi-nav-btn btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Validasi Data</a>
+        <a href="assets/images/Materi_3_Verifikasi_Data.pdf" target="_blank" class="materi-nav-btn btn-pdf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/><path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/></svg> Lihat PDF</a>
+        <a href="materi-pembersihan.html" class="materi-nav-btn btn-next">Pembersihan Data <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+    </nav>
+</article>
+</body>
+</html>

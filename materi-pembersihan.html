@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembersihan Data — Data Sim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/materi-detail.css">
+</head>
+<body>
+<div class="materi-topbar">
+    <div class="materi-topbar-inner">
+        <a href="materi.html" class="materi-back-btn" title="Kembali"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <span class="materi-topbar-title">Pembersihan Data</span>
+        <span class="materi-topbar-badge badge-red">Materi 4 / 4</span>
+    </div>
+</div>
+
+<article class="materi-article">
+    <header class="materi-article-header">
+        <span class="materi-article-number badge-red">Materi 04</span>
+        <h1 class="materi-article-title">Pembersihan Data</h1>
+        <p class="materi-article-desc">Pelajari teknik memperbaiki, mengedit, atau menghapus data yang bermasalah agar menghasilkan kumpulan data yang bersih dan siap digunakan.</p>
+    </header>
+
+    <!-- A -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">A</span> Pengantar dan Definisi</h2>
+        <p class="materi-text">Setelah tiga tahap sebelumnya — identifikasi, validasi, dan verifikasi — selesai dilaksanakan, kini seluruh permasalahan data telah tercatat dengan jelas. Tahap terakhir dalam siklus pengolahan data adalah <strong>pembersihan data</strong>, yaitu tahap di mana seluruh tindakan perbaikan dilaksanakan secara nyata.</p>
+        <p class="materi-text">Pembersihan data bukan sekadar menghapus data yang salah, melainkan melibatkan serangkaian tindakan yang berbeda-beda: apakah data akan <strong>dibiarkan</strong> karena sudah benar, <strong>diperbaiki</strong> nilainya, <strong>dihapus</strong> karena tidak dapat diselamatkan, atau <strong>ditandai</strong> untuk ditindaklanjuti.</p>
+        <div class="materi-highlight highlight-info">
+            <div class="materi-highlight-title">📘 Definisi</div>
+            <p class="materi-text"><strong>Pembersihan data</strong> (<em>data cleansing</em>) adalah proses memperbaiki, mengedit, atau menghapus data yang tidak akurat, tidak lengkap, tidak konsisten, atau tidak valid dalam suatu kumpulan data, berdasarkan hasil identifikasi, validasi, dan verifikasi yang telah dilakukan sebelumnya.</p>
+        </div>
+        <div class="materi-highlight highlight-success">
+            <div class="materi-highlight-title">🎯 Tujuan Akhir</div>
+            <p class="materi-text">Menghasilkan kumpulan data yang <strong>bersih, akurat, lengkap, konsisten</strong>, dan siap digunakan untuk analisis atau pengambilan keputusan.</p>
+        </div>
+    </section>
+
+    <!-- B -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">B</span> Tujuan dan Pentingnya Pembersihan Data</h2>
+        <p class="materi-text">Pembersihan data adalah tahap paling <strong>konkret</strong> dalam siklus pengolahan data. Tiga tahap sebelumnya bersifat diagnostik (menemukan masalah), sementara pembersihan bersifat <strong>terapeutik</strong> (memberikan solusi).</p>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Meningkatkan Akurasi Data</div><div class="flow-desc">Memastikan setiap nilai mencerminkan kondisi yang benar dan dapat diandalkan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Memastikan Konsistensi Data</div><div class="flow-desc">Tidak ada duplikasi tersisa dan seluruh nilai memenuhi standar kualitas.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Menghilangkan Redundansi</div><div class="flow-desc">Menghapus data duplikat sehingga setiap entitas hanya direpresentasikan satu kali.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Melengkapi Data yang Tidak Lengkap</div><div class="flow-desc">Mengisi kolom kosong berdasarkan sumber referensi atau menandai untuk ditindaklanjuti.</div></div></div>
+            <div class="flow-step"><div class="flow-number">✓</div><div class="flow-content"><div class="flow-title">Menghasilkan Data Siap Analisis</div><div class="flow-desc">Mengubah data mentah menjadi data bersih yang siap untuk pelaporan dan pengambilan keputusan.</div></div></div>
+        </div>
+    </section>
+
+    <!-- C -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">C</span> Jenis-Jenis Tindakan Pembersihan</h2>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">1. ✔ Data Bersih</h3>
+        <p class="materi-text">Entri data yang lolos seluruh tahap pemeriksaan tanpa masalah apapun. Data tidak perlu diubah dan langsung siap digunakan.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh</div>
+            <div class="example-row"><span class="example-field field-ok">Andi Wijaya</span><span class="example-field field-ok">2024001</span><span class="example-field field-ok">12/05/2008</span><span class="example-field field-ok">X-TKJ</span><span class="example-field field-ok">08123456789</span></div>
+            <p class="materi-text" style="font-size:0.82rem;color:#059669;">Semua kolom valid dan sesuai referensi → Status: Data Bersih</p>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">2. ✏️ Data Diedit</h3>
+        <p class="materi-text">Entri dengan kesalahan yang dapat diperbaiki — nilai salah diganti dengan nilai benar berdasarkan referensi atau aturan.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh Perubahan</div>
+            <div class="materi-table-wrapper" style="margin:8px 0;">
+                <table class="materi-table">
+                    <thead><tr><th>Kolom</th><th>Sebelum (Salah)</th><th>Sesudah (Benar)</th><th>Alasan</th></tr></thead>
+                    <tbody>
+                        <tr><td>Nama</td><td class="cell-error">Budi123 santoso</td><td class="cell-ok">Budi Santoso</td><td>Nama ada angka; sesuaikan referensi</td></tr>
+                        <tr><td>Kelas</td><td class="cell-error">XTKJ</td><td class="cell-ok">X-TKJ</td><td>Kurang tanda hubung</td></tr>
+                        <tr><td>Tgl Lahir</td><td class="cell-error">2008-07-15</td><td class="cell-ok">15/07/2008</td><td>Format tidak sesuai standar</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">3. 🗑️ Data Dihapus</h3>
+        <p class="materi-text">Entri yang mengandung masalah tidak dapat diperbaiki atau merupakan duplikat. Mempertahankan data ini justru menurunkan kualitas keseluruhan.</p>
+        <div class="materi-example">
+            <div class="materi-example-title">📋 Contoh: Data Duplikat</div>
+            <div style="margin-bottom:8px;"><span class="example-tag tag-ok">Baris 1 (Asli)</span><div class="example-row"><span class="example-field">Andi Wijaya</span><span class="example-field">2024001</span><span class="example-field">12/05/2008</span></div></div>
+            <div><span class="example-tag tag-error">Baris 3 (Duplikat → Dihapus)</span><div class="example-row"><span class="example-field field-error">Andi Wijaya</span><span class="example-field field-error">2024001</span><span class="example-field field-error">12/05/2008</span></div></div>
+        </div>
+
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--color-text);margin:24px 0 12px;">4. 🏷️ Ditandai</h3>
+        <p class="materi-text">Entri dengan masalah yang belum bisa diselesaikan karena membutuhkan informasi tambahan atau konfirmasi dari pihak yang berwenang. Data <strong>tidak dihapus</strong> dan <strong>tidak diedit</strong> sampai ada kejelasan.</p>
+        <div class="materi-highlight highlight-warning">
+            <div class="materi-highlight-title">⚡ Kapan Ditandai?</div>
+            <p class="materi-text">Data berstatus "Tidak Bisa Diverifikasi", ada ketidaksesuaian yang butuh konfirmasi, data meragukan, atau referensi memberikan dua nilai berbeda. <strong>Jika ragu, selalu pilih ditandai daripada dihapus.</strong></p>
+        </div>
+    </section>
+
+    <!-- D -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">D</span> Panduan Pemilihan Tindakan</h2>
+        <div class="materi-table-wrapper">
+            <table class="materi-table">
+                <thead><tr><th>Kondisi Data</th><th>Nilai Benar Diketahui?</th><th>Ada Duplikat?</th><th>Tindakan</th></tr></thead>
+                <tbody>
+                    <tr><td>Semua kolom benar & sesuai referensi</td><td>Ya</td><td>Tidak</td><td class="cell-ok">✔ Data Bersih</td></tr>
+                    <tr><td>Ada nilai salah (format, ejaan, isi)</td><td>Ya</td><td>Tidak</td><td style="color:var(--color-primary);font-weight:600;">✏️ Data Diedit</td></tr>
+                    <tr><td>Entri duplikat persis</td><td>Ya</td><td>Ya</td><td class="cell-error">🗑️ Data Dihapus</td></tr>
+                    <tr><td>Ada kolom kosong, nilai benar tidak diketahui</td><td>Tidak</td><td>Tidak</td><td style="color:#D97706;font-weight:600;">🏷️ Ditandai</td></tr>
+                    <tr><td>Data tidak valid & tidak bisa dipulihkan</td><td>Tidak</td><td>Tidak</td><td class="cell-error">🗑️ Data Dihapus</td></tr>
+                    <tr><td>Data meragukan, perlu konfirmasi</td><td>Belum pasti</td><td>Tidak</td><td style="color:#D97706;font-weight:600;">🏷️ Ditandai</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="materi-highlight highlight-danger">
+            <div class="materi-highlight-title">⚠️ Peringatan Penting</div>
+            <p class="materi-text">Jangan menghapus data hanya karena tampak mencurigakan. Jangan mengedit data berdasarkan asumsi tanpa konfirmasi dari sumber referensi. Jika penghapusan bersifat <strong>permanen</strong>, pastikan data memang benar-benar tidak diperlukan.</p>
+        </div>
+    </section>
+
+    <!-- E -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">E</span> Hubungan dengan Tahap Sebelumnya</h2>
+        <p class="materi-text">Pembersihan data sepenuhnya bergantung pada hasil tiga tahap sebelumnya:</p>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Identifikasi Data</div><div class="flow-desc">Output: Daftar data bermasalah → Menentukan entri mana yang perlu perhatian</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Validasi Data</div><div class="flow-desc">Output: Status validasi setiap entri → Menentukan jenis masalah untuk edit/tandai</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Verifikasi Data</div><div class="flow-desc">Output: Status verifikasi + nilai benar dari referensi → Acuan pengeditan data</div></div></div>
+            <div class="flow-arrow"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Pembersihan Data ← Tahap Ini</div><div class="flow-desc">Output: Data bersih, akurat, dan siap analisis</div></div></div>
+        </div>
+    </section>
+
+    <!-- F -->
+    <section class="materi-section">
+        <h2 class="materi-section-title"><span class="section-letter">F</span> Langkah-Langkah Pembersihan Data</h2>
+        <div class="materi-flow">
+            <div class="flow-step"><div class="flow-number">1</div><div class="flow-content"><div class="flow-title">Kumpulkan Seluruh Hasil Pemeriksaan</div><div class="flow-desc">Pastikan laporan identifikasi, validasi, dan verifikasi sudah tersedia lengkap sebagai panduan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">2</div><div class="flow-content"><div class="flow-title">Tangani Data Duplikat Terlebih Dahulu</div><div class="flow-desc">Hapus semua duplikat sebelum tindakan lain. Pastikan entri asli yang valid dipertahankan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">3</div><div class="flow-content"><div class="flow-title">Edit Data yang Dapat Diperbaiki</div><div class="flow-desc">Perbaiki kesalahan format, nilai tidak valid, atau ketidaksesuaian kecil berdasarkan referensi yang sah.</div></div></div>
+            <div class="flow-step"><div class="flow-number">4</div><div class="flow-content"><div class="flow-title">Tandai Data yang Butuh Konfirmasi</div><div class="flow-desc">Beri tanda pada entri yang belum bisa diselesaikan. Catat masalah dan pihak yang perlu dikonfirmasi.</div></div></div>
+            <div class="flow-step"><div class="flow-number">5</div><div class="flow-content"><div class="flow-title">Konfirmasi Data yang Sudah Bersih</div><div class="flow-desc">Verifikasi kembali bahwa entri tanpa perubahan memang benar-benar bersih.</div></div></div>
+            <div class="flow-step"><div class="flow-number">6</div><div class="flow-content"><div class="flow-title">Verifikasi Ulang Hasil Pembersihan</div><div class="flow-desc">Periksa akhir untuk memastikan tidak ada kesalahan baru akibat proses pembersihan.</div></div></div>
+            <div class="flow-step"><div class="flow-number">7</div><div class="flow-content"><div class="flow-title">Dokumentasikan Seluruh Perubahan</div><div class="flow-desc">Catat: entri yang diubah, nilai lama, nilai baru, alasan, dan sumber referensi yang digunakan.</div></div></div>
+        </div>
+    </section>
+
+    <!-- G -->
+    <section class="materi-section">
+        <div class="materi-summary">
+            <div class="materi-summary-title">📝 Ringkasan</div>
+            <ol>
+                <li><strong>Pembersihan data</strong> adalah tahap terakhir yang menghasilkan data bersih, akurat, lengkap, dan siap digunakan.</li>
+                <li>Terdapat <strong>empat tindakan</strong>: Data Bersih, Data Diedit, Data Dihapus, dan Ditandai.</li>
+                <li>Pemilihan tindakan berdasarkan: apakah nilai benar diketahui, apakah ada duplikat, dan apakah data bisa dipulihkan.</li>
+                <li>Pembersihan sepenuhnya bergantung pada hasil <strong>identifikasi, validasi, dan verifikasi</strong>.</li>
+                <li>Setiap tindakan harus didasarkan pada <strong>referensi yang sah</strong> dan didokumentasikan lengkap.</li>
+                <li>Data duplikat harus ditangani <strong>terlebih dahulu</strong> sebelum tindakan lain.</li>
+                <li><strong>Jika ragu</strong> antara menghapus atau menandai, selalu pilih ditandai terlebih dahulu.</li>
+            </ol>
+        </div>
+    </section>
+
+    <nav class="materi-bottom-nav">
+        <a href="materi-verifikasi.html" class="materi-nav-btn btn-prev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L11 6M5 12L11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Verifikasi Data</a>
+        <a href="assets/images/Materi_4_Pembersihan_Data .pdf" target="_blank" class="materi-nav-btn btn-pdf"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/><path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/></svg> Lihat PDF</a>
+        <span class="materi-nav-btn btn-next btn-disabled">Selesai <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+    </nav>
+</article>
+</body>
+</html>
