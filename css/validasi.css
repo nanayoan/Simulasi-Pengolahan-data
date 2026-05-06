@@ -394,11 +394,11 @@
     
     .val-rules {
         display: flex;
-        order: 3;
+        order: 2;
     }
 
-    .val-data-card { order: 1; }
-    .val-sidebar { order: 2; }
+    .val-data-card { order: 3; }
+    .val-sidebar { order: 1; }
 
     .data-card-header { padding: 14px 16px; }
     .data-fields { padding: 8px 16px 12px; }

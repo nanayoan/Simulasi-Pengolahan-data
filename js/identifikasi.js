@@ -33,7 +33,7 @@ function loadAIDataIfAvailable() {
             tr.appendChild(tdNo);
 
             // Data fields
-            const fields = ['nama', 'nis', 'tgl_lahir', 'kelas', 'no_telp'];
+            const fields = ['nis', 'nama', 'tgl_lahir', 'kelas', 'no_telp'];
             fields.forEach(field => {
                 const td = document.createElement('td');
                 td.className = 'cell-data';

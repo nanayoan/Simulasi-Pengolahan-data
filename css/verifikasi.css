@@ -306,10 +306,34 @@
         grid-column: span 1;
         display: flex;
         flex-direction: column;
+        order: -1;
     }
     .ver-fields { padding: 8px 16px 16px; }
 
-    .ver-main { padding: 16px 0 40px; }
+    .ver-main { padding: 16px 0 100px; }
+
+    .ver-nav-bar {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .ver-nav-bar .btn-action-secondary,
+    .ver-nav-bar .btn-action-primary {
+        padding: 10px 14px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+        min-width: 0;
+    }
+
+    .ver-nav-bar .btn-action-primary span,
+    .ver-nav-bar .btn-action-secondary span {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .btn-periksa-ver {
+        margin-bottom: 16px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -326,5 +350,23 @@
 
     .ver-field-label {
         font-size: 0.62rem;
+    }
+
+    .ver-nav-bar {
+        padding: 8px 8px;
+        gap: 6px;
+    }
+
+    .ver-nav-bar .btn-action-secondary,
+    .ver-nav-bar .btn-action-primary {
+        padding: 8px 10px;
+        font-size: 0.72rem;
+    }
+
+    .ver-nav-bar .btn-action-secondary svg,
+    .ver-nav-bar .btn-action-primary svg {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
     }
 }

@@ -672,6 +672,17 @@
 
     .ident-container {
         padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ident-sidebar {
+        padding: 0 4px;
+        order: -1;
+    }
+
+    .ident-table-section {
+        order: 1;
     }
 
     .ident-table-header {
@@ -706,10 +717,6 @@
     .btn-periksa {
         width: 100%;
         justify-content: center;
-    }
-
-    .ident-sidebar {
-        padding: 0 4px;
     }
 }
 

@@ -411,7 +411,7 @@
 }
 
 @media (max-width: 768px) {
-    .cl-top-section { flex-direction: column; }
+    .cl-top-section { flex-direction: column-reverse; }
     .cl-info-card { width: 100%; }
     .cl-status-btns { flex-wrap: wrap; }
     .cl-status-btn { padding: 10px 14px; font-size: 0.78rem; }
